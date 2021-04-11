@@ -1,0 +1,56 @@
+/*
+   ____                      ____             
+  / ___|__ _ _ __   __ _ ___|  _ \  _____   __
+ | |   / _` | '_ \ / _` / __| | | |/ _ \ \ / /
+ | |__| (_| | | | | (_| \__ \ |_| |  __/\ V / 
+  \____\__,_|_| |_|\__,_|___/____/ \___| \_/  
+                                              
+  */                                            
+
+
+
+
+.menu {
+  background-color: #212529;
+  padding: 25px;
+  border-radius: 5px;
+}
+ .bcomando{
+  text-align: left;
+  color: #8232eb;
+  cursor: pointer;
+  font-weight: 600;
+  border: 0;
+  padding: 0.75rem 1.25rem;
+  background-color: transparent;
+}
+.bcomando:hover{
+  color: #fff;
+}
+.bcomando-active {
+  background-color: #8232eb;
+  color: #fff;
+  border-radius: 5px;
+}
+.bcomando-active:hover{
+  color: #fff;
+}
+.cmd-input{
+  border: 0;
+  padding: 15px;
+  font-weight: 600;
+}
+.card-header{
+  transition: .2s;
+  font-weight: 700;
+}
+svg{
+  transition: all .3s ease;
+}
+.icon-arrow svg{
+  transform: rotate(180deg);
+}
+
+.background-header{
+  background-color: #8232eb !important;
+}

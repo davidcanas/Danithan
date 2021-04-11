@@ -1,0 +1,11 @@
+<script>
+var req = new XMLHttpRequest();
+req.responseType = 'json';
+req.open('GET', 'https://ipapi.co/json/', true);
+req.onload  = function() {
+  var ip = req.response.ip
+   console.log(`Seu ip **${ip}** foi gravado para evitar cópias/fraude !`)
+   
+};
+req.send(null);
+</script>

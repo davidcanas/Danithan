@@ -1,0 +1,176 @@
+  <!DOCTYPE html>
+<html lang="en">
+    <head>
+      <%- include('./components/header.ejs') %>
+       <link rel="stylesheet" href="/css/main.css">
+ 
+ <style>
+html, body {
+    min-height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+        
+footer.pc {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background-color: orange;
+    opacity: 0,5;
+    color: #FFF;
+    width: 100%;
+    height: 100px;    
+    text-align: center;
+    line-height: 100px;
+}
+footer.tel {
+  display: none;
+}
+h3 {
+  display: block;
+}
+
+
+input { 
+width: 600px;
+ height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  
+}
+label {
+  font-size: 25px;
+  color: black;
+}
+textarea {
+  width: 600px;
+  height: 200px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+
+}
+select {
+  width: 600px;
+ height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+@media(max-width: 756px) {
+html, body {
+    min-height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+footer.pc {
+  display: none;
+}
+footer.tel {
+   display: block;
+    margin-top: 56px;
+   background-color: transparent;
+   
+  
+}
+
+footer.tel p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    text-align: center;
+}
+h3 {
+  display: none;
+}
+input {
+  width: 300px;
+ height: 30px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+label {
+  font-size: 20px;
+  color: black;
+  
+}
+textarea {
+  width: 300px;
+  height: 100px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+select {
+  width: 300px;
+ height: 30px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+}
+
+ </style>
+  
+    </head>
+
+  <body>
+    
+        <%- include('./components/navbar.ejs') %>
+<center>
+<h1>Centro de Denúncias</h1>
+<h3>Caso apareça isto é porque você não está num celular</h3>
+  <form
+  id="save"
+  method="POST"
+  autocomplete="off"
+  action="https://www.ethanbot.tk/den/post/denunciar"
+  enctype="application/x-www-form-urlencoded"
+>
+
+    <label for="userdc2">Usuário a denunciar</label>
+    <br>
+    <input type="text" name="userdc2" id="userdc2" placeholder="Ex: Sla#0375">
+<br><br>
+    <label for="infrac">Tipo de Infração</label>
+   <br>
+    <select name="infrac" id="infrac">
+      <option value="nulo">Selecione uma opção</option>
+      <option value="guide">Quebra de Guidelines</option>
+      <option value="bugab">Abuso de Bugs</option>
+      <option value="fakenews">Fake news</option>
+    <option value="spam">Spam</option>
+     <option value="outro">Outro</option>
+    
+    </select>
+<br>
+    <label for="subject">Denúncia</label>
+   <br>
+    <textarea id="subject" placeholder="Escreva sua Denúncia!."></textarea>
+<br>
+<button type="submit" class="btn btn-magic">Enviar</button>
+
+  </form>
+  </center>
+<footer class="pc">
+            <p>Made with ❤️ by <a href="#">SrDCdev</a></p>
+        </footer>
+<footer class="tel">
+            <p>Made with ❤️ by <a href="#">SrDCdev</a></p>
+        </footer>
+        
+  </body>
+
+</html>

@@ -1,0 +1,24 @@
+{
+
+
+ "ban": {
+   "args": "Uso correcto : e/ban <@user> (motivo)",
+   "conf": "você quer mesmo banir",
+   "msgban": "📍┊ Caso queira uma punição silenciosa reaja com 👌",
+   "footer": "Reacciona con 🛑 para confirmar",
+   "silenceban": "🤫 Yo bani {{UserTag}} silenciosamente quando me pediste",
+   "d4rkoi": "Eu troquei reaga para reaja como você pediu"
+   
+ },
+ "setlang": {
+ "args": "Modo de uso e/setlang <lingua>",
+"sucess": "Ahora irei hablar en {{Lang}}"
+ },
+ "calc": {
+   "invalid": "♦️ • Cálculo inválido",
+   "title": "Calculator",
+  "field1": "Calc:",
+  "field2": "Result",
+  "footer": "Learning Math !"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ 
+ "ban": {
+   "args": "Correct use: d/ban @user <reason>",
+   "conf": "really want to ban",
+   "msgban": "📍┊ If you want a silent punishment, react with 👌",
+   "footer": "React with 🛑 to ban the user ",
+   "silenceban": "🤫 I'm banned {{UserTag}} silently as you asked",
+   "d4rkoi": "I changed Reaga by Reaja"
+   
+ },
+ "setlang": {
+ "args": "Use: d/setlang <language>",
+ "sucess": "Language set to {{Lang}}"
+ },
+ "calc": {
+   "invalid": "♦️ • Invalid Calc",
+  "title": "Calculator",
+  "field1": "Calc:",
+  "field2": "Result",
+  "footer": "Learning Math !"
+ }
+
+}
