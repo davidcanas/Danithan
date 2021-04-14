@@ -28,7 +28,8 @@ const help = new EthanEmbed()
 .setTitle("Meus comandos")
 .setDescription("Veja os meus comandos usaveis por enquanto" + "(ao todo são:" + this.client.commands.size + " comandos)")
 .addField("Utilidade", "`help, botinfo, ping, calc, docs`")
-  
+.setFooter(""-"")
+ctx.msg.channel.createMessage(help)  
 }
 
 }
