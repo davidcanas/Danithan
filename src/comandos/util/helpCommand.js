@@ -13,7 +13,7 @@ constructor(client) {
 }
 async execute(ctx) {
   
-		const ajuda = new EthanEmbed()
+		/*const ajuda = new EthanEmbed()
 			.setTitle('Ajuda')
 			.setDescription(
 				`Olá ${
@@ -23,7 +23,11 @@ async execute(ctx) {
 			.setFooter(`Obrigado por me usar ${ctx.msg.author.username}`)
 			.setColor('BLUE');
 	 const mens = await ctx.msg.channel.createMessage(ajuda);
-
+*/
+const help = new EthanEmbed()
+.setTitle("Meus comandos")
+.setDescription("Veja os meus comandos usaveis por enquanto" + "(ao todo são:" + this.client.commands.size + " comandos)")
+.addField("Utilidade", "`help, botinfo, ping, calc, docs`")
   
 }
 
