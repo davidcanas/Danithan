@@ -15,7 +15,7 @@ const nodes = [
     {
         identifier: 'Danithan Caraibas Node',
         host: "danithanlavalink.herokuapp.com",
-        port: 16188,
+        port: 80,
         password: "2008david",
         retryAmount: 30,
         retryDelay: 5000,
