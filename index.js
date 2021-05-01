@@ -137,10 +137,10 @@ client.on("rawWS", (d) => client.music.updateVoiceState(d));
 client.startLoaders()
 client.connect()
 module.exports = client
- require('./src/dashboard/server.js')
+
 
 client.on('error', err => {
  
-        console.error("Erro:" + err);
+        console.error("[Erro Recebido da index.js]: " + err);
   
  })
