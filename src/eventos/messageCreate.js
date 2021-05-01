@@ -133,7 +133,7 @@ module.exports = class messageCreate extends Event {
      msg.channel.createMessage(`O comando executado não existe`,  + `${!verificaSemelhanca(cmd, array) ? '' : `já parou para pensar que vc queria dizer` + `\`${prefix}${verificaSemelhanca(cmd, array)}\`?`}`)
   }
   
-  // Discord.js v12
+
 if (command) {
  if (!msg.channel.permissionsOf(this.client.user.id).has('sendMessages')) return  this.client.users.get(msg.author.id).getDMChannel().then(a => a.createMessage("Lamento mas não tenho permissão de enviar mensagens !"))
 	//if (guild && guild.disabledCmds && guild.disabledCmds.includes(command.help.name))

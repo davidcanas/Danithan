@@ -1,5 +1,5 @@
 
-//const { Collection, MessageEmbed } = require("discord.js")
+
 const Event = require("../Structures/Event");
 module.exports = class ready extends Event {
     constructor(client) {

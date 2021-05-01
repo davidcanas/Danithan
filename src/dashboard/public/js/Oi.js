@@ -1,1 +1,0 @@
-let oi = "Olá Cusco"
