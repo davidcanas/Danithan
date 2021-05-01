@@ -55,7 +55,7 @@ getMoreCommonChars(string) {
   }
  inlineReply(mens, ch) {
   if (!ch) {
-    ch = ctx.msg.channel.id
+    ch = this.msg.channel.id
   }
   if (!mens) {
     throw new Error("An message content is required !")
@@ -63,7 +63,7 @@ getMoreCommonChars(string) {
   const body = {
     content: mens,
     message_reference: {
-      message_id: ctx.msg.id,
+      message_id: this.msg.id,
       channel_id: ch,
       guild_id: ch.guild.id
     }
