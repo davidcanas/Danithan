@@ -53,4 +53,30 @@ getMoreCommonChars(string) {
   
     return number < 1000 ? ''+number : (calc.indexOf('.') === calc.length-3 ? calc.replace(/\.00/, '') : calc)+suffsFromZeros[divDigits]
   }
+ inlineReply(ch, mens) {
+  if (!ch) {
+    ch = msg.channel.id
+  }
+  if (!mens) {
+    throw new Error("An message content is required !")
+  }
+  const body = {
+    content: mens,
+    message_reference: {
+      message_id: msg.id,
+      channel_id: ch,
+      guild_id: ch.guild.id
+    }
+  }
+
+  const fetch = require('node-fetch')
+  fetch(`https://discord.com/api/v8/channels/${msg.channel.id}/messages`, {
+    method: 'post',
+    body: JSON.stringify(body),
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bot ${process.env.BOT_TOKEN}`
+    }
+  })
+}
 }
