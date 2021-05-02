@@ -6,6 +6,7 @@ const ReactionHandler = require('eris-reactions');
 const guildDB = require("../../Database/models/guildDB")
 //const firedb = firebase.database()
 const Command = require("../../Structures/Command")
+const { Type } = require('@anishshobith/deeptype');
 module.exports = class evalCommand extends Command {
 constructor(client) {
     super(client,  { 
