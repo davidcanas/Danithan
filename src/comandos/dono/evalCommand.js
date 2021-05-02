@@ -41,9 +41,10 @@ name: 'eval.txt',
 file: Buffer.from(code)
 })
     }
+    const tipo = new Type(code).is
     const evalBed = new EthanEmbed () 
     .setTitle("Eval Executado:")
-    .setDescription(`\`\`\`js\n${code}\n\`\`\`\n**Tempo de Execução:**\n\`\`\`\n${((stop[0] * 1e9) + stop[1]) / 1e6}ms\n\`\`\``)
+    .setDescription(`\`\`\`js\n${code}\n\`\`\`\n**Tempo de Execução:**\n\`\`\`\n${((stop[0] * 1e9) + stop[1]) / 1e6}ms (${tipo})\n\`\`\``)
     
     .setColor("GREEN")
        let mens = await ctx.msg.channel.createMessage(evalBed)

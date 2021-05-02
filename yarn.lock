@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@anishshobith/deeptype@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@anishshobith/deeptype/-/deeptype-1.1.0.tgz#38c8e634a563904753aedefdf0082a0b4f1b76a4"
+  integrity sha512-C/NfCUQMydPrpVGVmcYjMxr4aIJ/tTps/voDSuDM3Zf0B5K5M0Kw4e9AeUppd55eH0j7DFHzc2eKsidz3qarRg==
+
 "@babel/runtime@^7.12.0":
   version "7.13.17"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.17.tgz#8966d1fc9593bf848602f0662d6b4d0069e3a7ec"
