@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const port = 3000;
 const client = require("../../index")
 
 app.get('/', (req, res) => res.send('Hi lorena'));
@@ -8,7 +7,7 @@ app.listen(process.env.PORT || 3000, () => console.log(`Danithan on na porta ${p
 
 app.get('/api', (req, res) => {
   let a = []
-  client.commands.forEach(cmd =>{
+  client.commands.forEach(cmd => {
     var arr = {
       name: cmd.commandSettings.name,
       description: cmd.commandSettings.description,
