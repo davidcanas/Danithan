@@ -25,8 +25,8 @@ module.exports = class tugafmCommand extends Command {
         try {
             tuga.play(radio)
         } catch (err) {
-            ctx.msg.channel.createMessage("Ocorreu um erro, mandarei abaixo:")
-            ctx.msg.channel.createMessage(err)
+            ctx.msg.channel.createMessage("Ocorreu um erro, " + err)
+          
         }
     }
 }
