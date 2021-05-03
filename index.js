@@ -17,7 +17,7 @@ client.startLoaders()
 client.connect()
 module.exports = client
 
-
+require("./src/api/app")
 client.on('error', err => {
  
         console.error("[Erro Recebido da index.js]: " + err);

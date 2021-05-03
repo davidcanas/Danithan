@@ -24,7 +24,7 @@ module.exports = class ready extends Event {
                     });
       }, 17000);
     console.log(`\x1b[36m[${new Date().toUTCString()}] Bot Online \x1b[0m`);
-    this.client.music.init(this.client.user.id);
+   
 
 }
 }
