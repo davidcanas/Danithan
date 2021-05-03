@@ -3,10 +3,10 @@ const app = express();
 const port = 3000;
 const client = require("../../index")
 
-app.get('/', (req, res) => res.send('Hello World!'));
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.get('/', (req, res) => res.send('Hi lorena'));
+app.listen(process.env.PORT || 3000, () => console.log(`Danithan on na porta ${port}!`));
 
-app.get('/products', (req, res) => {
+app.get('/api', (req, res) => {
   let a = []
   client.commands.forEach(cmd =>{
     var arr = {
