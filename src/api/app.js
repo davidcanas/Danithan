@@ -3,7 +3,7 @@ const app = express();
 const client = require("../../index")
 
 app.get('/', (req, res) => res.send('Hi lorena'));
-app.listen(process.env.PORT || 3000, () => console.log(`Danithan on na porta ${port}!`));
+app.listen(process.env.PORT || 3000, () => console.log(`Danithan online possivelmente`));
 
 app.get('/api', (req, res) => {
   let a = []
