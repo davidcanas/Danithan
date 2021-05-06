@@ -149,7 +149,7 @@ let userVerif = await this.client.database.user.findOne({userID: msg.author.id})
 
  
  setTimeout(() => {
-  mensg.delete()
+a.delete()
 }, 15000);
  })
   }
