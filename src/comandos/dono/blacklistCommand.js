@@ -12,6 +12,9 @@ constructor(client) {
     })
 }
 async execute(ctx) {
+    if (ctx.msg.author.id !== '791347446298312724') {
+        return ctx.msg.channel.createMessage('Apenas meu criador');
+    }
     let tipo = ctx.args[0]
     let user = ctx.args[1]
     let motivo = ctx.args.slice(2).join(" ")
