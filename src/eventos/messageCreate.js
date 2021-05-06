@@ -138,8 +138,21 @@ if (command) {
  if (!msg.channel.permissionsOf(this.client.user.id).has('sendMessages')) return  this.client.users.get(msg.author.id).getDMChannel().then(a => a.createMessage("Lamento mas não tenho permissão de enviar mensagens !"))
 	//if (guild && guild.disabledCmds && guild.disabledCmds.includes(command.help.name))
       //  return message.channel.createMessage(`Comando desativado !`);
+let userVerif = await this.client.database.user.findOne({userID: msg.author.id})
+ if (userVerif.blacklist) {
+  const embeda = new EthanEmbed()
+   .setTitle("<:ban:826727595529469962> Você está banido !")
+   .setDescription(`${msg.author.mention}, você foi e está banido de me usar desde \`${userVerif.horaBlacklist}\` pelo motivo \`${userVerif.motivo}\`\n`)
+   .setColor("RED")
+   .setFooter("Adeus, até um dia !")
+ return msg.channel.createMessage(embeda).then(a =>{
 
  
+ setTimeout(() => {
+  mensg.delete()
+}, 15000);
+ })
+  }
  // if(command.help.enabled === false) {
    // return message.channel.send("Comando desativado")
  // }

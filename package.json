@@ -10,7 +10,7 @@
     "@anishshobith/deeptype": "^1.1.0",
     "dotenv": "^8.2.0",
     "erela.js": "^2.3.3",
-    "eris": "^0.15.0",
+    "eris": "^0.15.1",
     "eris-reactions": "^0.1.4",
     "ethanutils": "^1.0.4",
     "express": "^4.17.1",
