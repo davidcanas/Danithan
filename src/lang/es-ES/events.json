@@ -1,0 +1,5 @@
+{
+"didYouMean": {
+   "msg": "Lo siento, no pude encontrar el comando `{{Cmd}}`\n¿Quiso decir `{{didYouMean}}`?" 
+}
+}

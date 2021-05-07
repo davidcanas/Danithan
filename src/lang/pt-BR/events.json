@@ -1,7 +1,5 @@
 {
-  "erro": {
-   "cmdhead": "Comando não encontrado",
-   "cmd404": "Eu não consegui encontrar o comando ", 
-   "cmd4042": "já tentou usar"
- }
-}
+  "didYouMean": {
+     "msg": "Não consegui encontrar o comando `{{Cmd}}`\nSerá que quis dizer `{{didYouMean}}`?" 
+  }
+  }

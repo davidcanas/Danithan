@@ -2,7 +2,7 @@
 
 
  "ban": {
-   "args": "Uso correcto : e/ban <@user> (motivo)",
+   "args": "Uso correcto : d/ban <@user> (motivo)",
    "conf": "você quer mesmo banir",
    "msgban": "📍┊ Caso queira uma punição silenciosa reaja com 👌",
    "footer": "Reacciona con 🛑 para confirmar",

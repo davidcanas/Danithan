@@ -130,9 +130,11 @@ module.exports = class messageCreate extends Event {
       } */
 
       if (!command) {
+        const emb = new EthanEmbed()
+        .setDescription(t("events:didYouMean.msg", {Cmd: cmd, didYouMean: verificaSemelhanca(cmd, array)}))
+        .setColor("RED")
 
-
-        msg.channel.createMessage(`O comando executado não existe já parou para pensar que vc queria dizer\`${prefix}${verificaSemelhanca(cmd, array)}\`?`)
+        msg.channel.createMessage(emb)
       }
 
 
