@@ -42,6 +42,7 @@ async execute(ctx) {
     ctx.msg.channel.createMessage(a)
 }
 if (tipo === "remove") {
+    let userTag = userDC.username + "#" + userDC.discriminator + " (" + userDC.id + ")"
     let userDC = this.client.users.get(user) || await this.client.getRESTUser(user);
     this.client.database.user.findOneAndUpdate({
         userID: userDC.id,
