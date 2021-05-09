@@ -134,8 +134,12 @@ module.exports = class messageCreate extends Event {
         .setDescription(t("events:didYouMean.msg", {Cmd: cmd, didYouMean: verificaSemelhanca(cmd, array)}))
         .setColor("RED")
 
-        msg.channel.createMessage(emb)
-      }
+       const mensg = await msg.channel.createMessage(emb)
+        setTimeout(() => {
+              mens.delete()
+            }, 15000);
+          
+}
 
 
       if (command) {
