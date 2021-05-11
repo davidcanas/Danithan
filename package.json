@@ -2,7 +2,7 @@
   "name": "DanithanJS",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "GNU Affero General Public License v3.0",
   "scripts": {
     "start": "node index.js"
   },
