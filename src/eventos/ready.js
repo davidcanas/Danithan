@@ -12,9 +12,9 @@ module.exports = class ready extends Event {
 	let activities = [
 			`Utilize d/help para obter ajuda`,
 			`Estou em ${this.client.guilds.size} servidores!`,
-			` Versão 1.2`,
+			` Versão 1.2 | Atualizações em breve`,
 			`😃 Já Conheço ${this.client.users.size} usuários !`,
-		 `Danithan`
+		 `🏳️‍🌈 | #OrgulhoLGBTQIA+ | #MêsDoOrgulhoLGBTQIA+ `
 		],
 		i = 0;
  setInterval(async () => {
