@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@anishshobith/deeptype": "^1.1.0",
+    "discord-buttons": "^3.0.1",
     "dotenv": "^8.2.0",
     "erela.js": "^2.3.3",
     "eris": "^0.15.1",

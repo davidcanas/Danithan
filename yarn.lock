@@ -233,6 +233,11 @@ devtools-protocol@0.0.869402:
   resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.869402.tgz#03ade701761742e43ae4de5dc188bcd80f156d8d"
   integrity sha512-VvlVYY+VDJe639yHs5PHISzdWTLL3Aw8rO4cvUtwvoxFd6FHbE4OpHHcde52M6096uYYazAmd4l0o5VuFRO2WA==
 
+discord-buttons@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/discord-buttons/-/discord-buttons-3.0.1.tgz#ace59e21ff2dc41bad4f3463227482c65bd23783"
+  integrity sha512-SQeX27tgdMetfB5RkSUdz3PnpHp6OGAa/U+NatdGCCijWHQMMlxdgP1xrHz2+e1qWEMa9mQH9YfDGjN2LFraWw==
+
 dotenv@^8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"

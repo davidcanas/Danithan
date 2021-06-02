@@ -11,8 +11,7 @@ const client = new Danithan(config.token, {
     defaultImageFormat: 'png', 
     defaultImageSize: 2048
 }, config);
-
-           
+ client.button = require("discord-buttons")(client)          
 client.startLoaders()
 client.connect()
 module.exports = client
