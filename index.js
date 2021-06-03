@@ -27,7 +27,12 @@ client.on('error', err => {
     console.log("Id da guild" + packet.d.guild_id)
     console.log("Channel" + packet.d.channel_id)
     console.log("ID Message" + packet.d.id)  
-
-   client.guilds.get(packet.d.guild_id).channels.get(packet.d.channel_id).messages.get(packet.d.message.id).edit("Olá você clicou numa interação ")
-     }
+ console.log(packet)
+ if(packet.d.data.custom_id === "teste") {  
+ client.guilds.get(packet.d.guild_id).channels.get(packet.d.channel_id).messages.get(packet.d.message.id).edit("Alguém clicou numa interação com o custom_id " + packet.d.data.custom_id + " clicado por: " + packet.d.member.nick) 
+ }
+ if (packet.d.data.custom_id === "delmsg") {
+    client.guilds.get(packet.d.guild_id).channels.get(packet.d.channel_id).messages.get(packet.d.message.id).delete()
+ }     
+}
  })

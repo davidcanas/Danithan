@@ -47,18 +47,28 @@ file: Buffer.from(code)
     .setDescription(`\`\`\`js\n${code}\n\`\`\`\n**Tempo de Execução:**\n\`\`\`\n${((stop[0] * 1e9) + stop[1]) / 1e6}ms (${tipo})\n\`\`\``)
     
     .setColor("GREEN")
-       let mens = await ctx.msg.channel.createMessage(evalBed)
-       mens.addReaction("🗑️")
-     const reactionListener = new ReactionHandler.continuousReactionStream(
-            mens, 
-            (userID) => userID !== mens.author.id && userID === ctx.msg.author.id, 
-            false, 
-            { maxMatches: 1, time: 900000 }
-        );
+this.client.createMessage(ctx.msg.channel.id , {
+  embed: evalBed.embed,
+  components: [
+    {
+      type: 1,
+    components: [
+      {
+        type: 2,
+        style: 2,
+        label: "🚮 Apagar Eval",
+        disabled: false,
+        url: undefined,
+        custom_id: "delmsg"
+
+      }
+    ]
+    }
+  ]
+})
     
-        reactionListener.on('reacted', (event) => {
-         mens.delete()
-               });
+    
+      
    
         
       } catch(e) {
@@ -66,19 +76,29 @@ file: Buffer.from(code)
     .setTitle("Ocorreu um erro:")
     .setDescription(`\`\`\`js\n${e}\n\`\`\``)
     .setColor("RED")
+    this.client.createMessage(ctx.msg.channel.id, {
+      embed: errBed.embed,
+      components: [
+        {
+          type: 1,
+        components: [
+          {
+            type: 2,
+            style: 2,
+            label: "🚮 Apagar Erro",
+            disabled: false,
+            url: undefined,
+            custom_id: "delmsg"
     
-      let mens = await ctx.msg.channel.createMessage(errBed);
-    mens.addReaction("🗑️")
-     const reactionListener = new ReactionHandler.continuousReactionStream(
-            mens, 
-            (userID) => userID !== mens.author.id && userID === ctx.msg.author.id, 
-            false, 
-            { maxMatches: 1, time: 900000 }
-        );
+          }
+        ]
+        }
+      ]
+    })
     
-        reactionListener.on('reacted', (event) => {
-         mens.delete()
-               });
+ 
+    
+        
    
     }
 
