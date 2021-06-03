@@ -31,8 +31,11 @@ client.on('error', err => {
  if(packet.d.data.custom_id === "teste") {  
  client.guilds.get(packet.d.guild_id).channels.get(packet.d.channel_id).messages.get(packet.d.message.id).edit("Alguém clicou numa interação com o custom_id " + packet.d.data.custom_id + " clicado por: " + packet.d.member.nick) 
  }
- if (packet.d.data.custom_id === "delmsg") {
+ if (packet.d.data.custom_id === "delmsgeval") {
+   
+   if (packet.d.member.user.id !== "791347446298312724" && packet.d.member.user.id !== "718078381199065150") {
     client.guilds.get(packet.d.guild_id).channels.get(packet.d.channel_id).messages.get(packet.d.message.id).delete()
+   }
  }     
 }
  })

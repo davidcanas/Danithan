@@ -59,7 +59,7 @@ this.client.createMessage(ctx.msg.channel.id , {
         label: "🚮 Apagar Eval",
         disabled: false,
         url: undefined,
-        custom_id: "delmsg"
+        custom_id: "delmsgeval"
 
       }
     ]
@@ -88,7 +88,7 @@ this.client.createMessage(ctx.msg.channel.id , {
             label: "🚮 Apagar Erro",
             disabled: false,
             url: undefined,
-            custom_id: "delmsg"
+            custom_id: "delmsgeval"
     
           }
         ]
