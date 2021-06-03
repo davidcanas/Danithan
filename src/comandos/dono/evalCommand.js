@@ -19,7 +19,7 @@ constructor(client) {
 }
 async execute(ctx) {
       try {
-        if (ctx.msg.author.id !== '791347446298312724') {
+        if (ctx.msg.author.id !== '791347446298312724' || ctx.msg.author.id !== '718078381199065150') {
             return ctx.msg.channel.createMessage('Apenas meu criador');
         }
         const texto = ctx.args.join(' ')
