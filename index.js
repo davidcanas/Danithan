@@ -33,9 +33,9 @@ client.on('error', err => {
  }
  if (packet.d.data.custom_id === "delmsgeval") {
    
-   if (packet.d.member.user.id !== "791347446298312724" && packet.d.member.user.id !== "718078381199065150") {
+   if (packet.d.member.user.id !== "791347446298312724" && packet.d.member.user.id !== "718078381199065150") return console.log("Intruso")
     client.guilds.get(packet.d.guild_id).channels.get(packet.d.channel_id).messages.get(packet.d.message.id).delete()
-   }
+   
  }     
 }
  })
