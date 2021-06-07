@@ -3,6 +3,7 @@ const Eris = require("eris")
 const ReactionHandler = require('eris-reactions');
 //const sourcebin = require('sourcebin');
 //const firebase = require("firebase")
+const ExecutorStupidError = require("../../Structures/DaniError")
 const guildDB = require("../../Database/models/guildDB")
 //const firedb = firebase.database()
 const Command = require("../../Structures/Command")

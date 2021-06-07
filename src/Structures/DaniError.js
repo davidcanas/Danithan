@@ -1,6 +1,6 @@
-module.exports = class DanithanError extends Error {
+module.exports = class ExecutorStupidError extends Error {
     constructor(message) {
       super(message)
-      this.name = "DanithanError"
+      this.name = "ExecutorStupidError"
     } 
   }

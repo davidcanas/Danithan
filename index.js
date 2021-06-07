@@ -1,7 +1,7 @@
 const Danithan = require('./src/Danithan')
 const config = require('./config')
 const { Manager } = require('erela.js');
-
+require("./src/Structures/DaniError")
 const client = new Danithan(config.token, {
     allowedMentions: {
         everyone: false
