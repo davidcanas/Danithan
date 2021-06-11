@@ -18,5 +18,5 @@ module.exports = class EventLoader {
         };
 
         files.forEach(forEachFile);
-    }
-}
+    };
+};

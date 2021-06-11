@@ -1,4 +1,3 @@
-  
 module.exports = {
   levenshteinDistance(source, target) {
     var result = []; 

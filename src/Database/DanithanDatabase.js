@@ -10,7 +10,7 @@ module.exports = class DanithanDatabase {
             poolSize: 5,
             connectTimeoutMS: 10000,
             family: 4
-        }
+        };
         
         connect(uri, options, err => {
             if(err) throw new Error("MongoDB Error: " + err);
@@ -22,6 +22,6 @@ module.exports = class DanithanDatabase {
             user: model("User", require('./models/userDB')),
             guild: model("Guild", require('./models/guildDB')),
             bot: model("Bot", require('./models/botDB'))
-        }
-    }
-}
+        };
+    };
+};

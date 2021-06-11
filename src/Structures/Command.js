@@ -10,7 +10,6 @@ module.exports = class Command {
             devOnly: options.devOnly || false,
             userperms: options.userperms || [],
             botperms: options.botperms || [],
-   
-        }
-    }
-}
+        };
+    };
+};

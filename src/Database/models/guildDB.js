@@ -1,9 +1,6 @@
 const { Schema} = require('mongoose');
 
-
-
-module.exports = new Schema({
-  
+module.exports = new Schema({  
     guildID: {
         type: String,
         required: true
@@ -26,16 +23,16 @@ module.exports = new Schema({
     djrole: {
         type: String
     },
-  Settings: {
+    Settings: {
         lang: {
             type: String,
             default: "pt-BR"
         },
-       gay: {
-         type: Boolean,
-         default: false
-       },
-  }
+        gay: {
+            type: Boolean,
+            default: false
+        },
+    }
 }, { 
     versionKey: false
 });

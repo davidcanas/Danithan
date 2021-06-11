@@ -8,7 +8,6 @@ module.exports = class CommandsLoader {
         if (!categories) throw new Error(`CommandLoader Error: No such file on '${categoriesPath}'`);
 
         const forEachCategory = (category) => {
-
             const forEachCommand = (commando) => {
                 const Command = require(`../comandos/${category}/${commando}`);
 
@@ -26,8 +25,8 @@ module.exports = class CommandsLoader {
             if (!commands) return console.log(`CommandLoader Warn: Category '${category}' is empty`);
 
             commands.forEach(forEachCommand);
-        }
+        };
 
         categories.forEach(forEachCategory);
-    }
-}
+    };
+};
