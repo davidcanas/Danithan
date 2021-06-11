@@ -1,5 +1,5 @@
 {
-  "name": "DanithanJS",
+  "name": "danithanjs",
   "version": "1.0.0",
   "main": "index.js",
   "license": "GNU Affero General Public License v3.0",
@@ -9,7 +9,7 @@
   "dependencies": {
     "@anishshobith/deeptype": "^1.1.0",
     "discord-buttons": "^3.0.1",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "erela.js": "^2.3.3",
     "eris": "^0.15.1",
     "eris-reactions": "^0.1.4",

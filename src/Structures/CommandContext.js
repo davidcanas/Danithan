@@ -1,41 +1,39 @@
 module.exports = class CommandContext {
     constructor(client, msg, args, t, emoji, ) {
-        this.client = client;
-        this.msg = msg;
-        this.args = args;
-        this.t = t;
-        this.emoji = emoji
-        
-      }
-     async findUser(query) {
-        let u
-        try {
-            u = this.client.users.get(query.replace(/[<>@!]/gi, "")) || await this.client.getRESTUser(query);
-        } catch { }
-        if (!u) return "Usuário não encontrado"
-        u.tag = `${u.username}#${u.discriminator}`
+      this.client = client;
+      this.msg = msg;
+      this.args = args;
+      this.t = t;
+      this.emoji = emoji;
+    };
+    async findUser(query) {
+        let u;
+
+        u = this.client.users.get(query.replace(/[<>@!]/gi, "")) || await this.client.getRESTUser(query);
+        if (!u) return "Usuário não encontrado";
+        u.tag = `${u.username}#${u.discriminator}`;
         return u;
     }
     random(arr) {
         return arr[Math.floor(Math.random() * arr.length)];
     }
     MsToDate(ms){
-  let seg = Math.floor(ms/1000)
-  let minutes = 0
-  let hours = 0
-  let days = 0
+      let seg = Math.floor(ms/1000)
+      let minutes = 0
+      let hours = 0
+      let days = 0
 
-  while (seg >= 60) minutes++, seg-=60
-  while (minutes >= 60) hours++, minutes-=60
-  while (hours >= 24) days++, hours-=24
-  return {
-   dias: days,
-   horas: hours,
-   minutos: minutes,
-   segundos: seg
-  }
-}
-getMoreCommonChars(string) {
+      while (seg >= 60) minutes++, seg-=60
+      while (minutes >= 60) hours++, minutes-=60
+      while (hours >= 24) days++, hours-=24
+      return {
+      dias: days,
+      horas: hours,
+      minutos: minutes,
+      segundos: seg
+      }
+  };
+  getMoreCommonChars(string) {
     const chars = {}
     for(var i = 0; i < string.length; i++) {
       if (!chars[string[i]])
@@ -53,19 +51,19 @@ getMoreCommonChars(string) {
   
     return number < 1000 ? ''+number : (calc.indexOf('.') === calc.length-3 ? calc.replace(/\.00/, '') : calc)+suffsFromZeros[divDigits]
   }
- inlineReply(mens, ch) {
-  if (!ch) {
-    ch = this.msg.channel
-  }
-  if (!mens) {
-    throw new Error("An message content is required !")
-  }
-  const body = {
-    content: mens,
-    message_reference: {
-      message_id: this.msg.id,
-      channel_id: ch.id,
-      guild_id: ch?.guild.id
+  inlineReply(mens, ch) {
+    if (!ch) {
+      ch = this.msg.channel
+    }
+    if (!mens) {
+      throw new Error("An message content is required !")
+    }
+    const body = {
+      content: mens,
+      message_reference: {
+        message_id: this.msg.id,
+        channel_id: ch.id,
+        guild_id: ch?.guild.id
     }
   }
 
@@ -78,5 +76,5 @@ getMoreCommonChars(string) {
       'Authorization': `Bot ${process.env.BOT_TOKEN}`
     }
   })
-}
-}
+  };
+};
