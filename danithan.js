@@ -7,7 +7,7 @@ const Danithan = require('./src/Danithan');
 require("./src/Structures/DaniError");
 require("./src/api/app");
 
-const client = new Danithan(process.ENV.BOT_TOKEN, {
+const client = new Danithan("NzkzMDYzNTc0ODM0MTE4Njk2.X-m0Ag.xbI8YrlSZ9WIKu0Rut5RE1AhYzw", {
     allowedMentions: {
         everyone: false
     },
