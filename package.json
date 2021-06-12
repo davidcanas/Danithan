@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "GNU Affero General Public License v3.0",
   "scripts": {
-    "start": "node index.js"
+    "start": "node danithan.js"
   },
   "dependencies": {
     "@anishshobith/deeptype": "^1.1.0",
