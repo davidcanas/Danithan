@@ -7,8 +7,8 @@ module.exports = class DaniClient extends Client {
         super(token, options);
         
         this.settings = {
-            mongo: settings.mongo,
-            owners: settings.owners
+            mongo: "mongodb+srv://DanithanBot:david2021@danicluster.rkt3t.mongodb.net/Database?retryWrites=true&w=majority",
+            owners: "791347446298312724"
         };
 
         this.database = new DanithanDatabase(this.settings.mongo);
