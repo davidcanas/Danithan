@@ -93,7 +93,7 @@ module.exports = class messageCreate extends Event {
 
        const mensg = await msg.channel.createMessage(emb)
         setTimeout(() => {
-          mens.delete()
+          mensg.delete()
         }, 15000);         
       }
 
