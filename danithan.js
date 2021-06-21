@@ -7,6 +7,7 @@ const Danithan = require('./src/Danithan');
 require("./src/Structures/DaniError");
 require("./src/api/app");
 
+
 const client = new Danithan("NzkzMDYzNTc0ODM0MTE4Njk2.X-m0Ag.xbI8YrlSZ9WIKu0Rut5RE1AhYzw", {
     allowedMentions: {
         everyone: false
@@ -19,8 +20,45 @@ const client = new Danithan("NzkzMDYzNTc0ODM0MTE4Njk2.X-m0Ag.xbI8YrlSZ9WIKu0Rut5
       
 client.startLoaders();
 client.connect();
+const { Manager } = require('erela.js');
 
+const nodes = [
+    {
+        identifier: 'Danithan Caraibas Node',
+        host: 'lavalink-danithan.herokuapp.com',
+        port: 80,
+        password: 'danithangay',
+        retryAmount: 30,
+        retryDelay: 3000,
+        secure: false
+    }
+];
 
+client.manager = new Manager({
+  nodes,
+  send: (id, payload) => {
+    const guild = client.guilds.get(id);
+    if (guild) guild.shard.send(payload);
+  }
+});
+
+client.on('rawWS', d => client.manager.updateVoiceState(d));
+
+client.once('ready', () => {
+  client.manager.init(client.user.id);
+});
+client.manager.on('nodeConnect', (node) => {
+	const sendPing = () => {
+		node.send({
+			op: 'ping'
+		})
+	};
+
+	sendPing();
+	setInterval(() => {
+		sendPing();
+	}, 45000);
+});
 client.on('error', async(err) => {
     console.error("[Erro Recebido da index.js]: " + err);
 });
