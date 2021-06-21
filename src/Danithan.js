@@ -1,7 +1,7 @@
 const { Client, Collection } = require('eris');
 const DanithanDatabase = require('./Database/DanithanDatabase');
 const Loaders = require('./Loaders');
-
+//teste
 module.exports = class DaniClient extends Client {
     constructor(token, options = {}, settings) {
         super(token, options);
