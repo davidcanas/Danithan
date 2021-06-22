@@ -38,7 +38,7 @@ client.manager = new Manager({
   nodes,
   send: (id, payload) => {
     const guild = client.guilds.get(id);
-    if (guild) guild.shard.ws.send(payload);
+    if (guild) guild.shard.ws.send(JSON.stringify(payload))
   }
 });
 
