@@ -69,8 +69,9 @@ client.manager.on("trackStart", (player, track) => {
     .setTitle("💿 Tocando Agora")
     .addField("🎵 Nome da música:", `[${track.title}](${track.uri})`)
     .addField("👤 Pedido por:", track.requester.username)
-    .setColor("RANDOM")
-    .setFooter("DJ Dani")
+   .addField("⌛ Duração", ctx.MsToDate(track.duration))
+  .setColor("RANDOM")
+    .setFooter("💻")
 channel.createMessage(embedaa)
   })
 client.on("rawWS", async(packet) => {
