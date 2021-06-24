@@ -67,7 +67,7 @@ client.manager.on("trackStart", (player, track) => {
     // Send a message when the track starts playing with the track name and the requester's Discord tag, e.g. username#discriminator
     const embedaa = new EthanEmbed() 
     .setTitle("💿 Tocando Agora")
-    .addField("🎵 Nome da música:", track.title)
+    .addField("🎵 Nome da música:", `[${track.title}](${track.uri})`)
     .addField("👤 Pedido por:", track.requester.username)
     .setColor("RANDOM")
     .setFooter("DJ Dani")
