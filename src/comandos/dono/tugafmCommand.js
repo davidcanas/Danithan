@@ -5,7 +5,7 @@ module.exports = class tugafmCommand extends Command {
     constructor(client) {
         super(client, {
             name: "tugafm",
-            aliases: ["tugaradio"],
+            aliases: ["play"],
             cooldown: 0,
             category: "Owner",
             devOnly: false
