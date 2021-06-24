@@ -3,7 +3,7 @@ require('dotenv').config({
 });
 //A 
 const Danithan = require('./src/Danithan');
-
+const { EthanEmbed } = require("ethanutils")
 require("./src/Structures/DaniError");
 require("./src/api/app");
 
@@ -65,9 +65,14 @@ client.on('error', async(err) => {
 client.manager.on("trackStart", (player, track) => {
     const channel = client.getChannel(player.textChannel);
     // Send a message when the track starts playing with the track name and the requester's Discord tag, e.g. username#discriminator
-    channel.createMessage(`Now playing: \`${track.title}\`, requested by \`${track.requester.username}\`.`);
-  });
-  
+    const embedaa = new EthanEmbed() 
+    .setTitle("💿 Tocando Agora")
+    .addField("🎵 Nome da música:", track.title)
+    .addField("👤 Pedido por:", track.requester.username)
+    .setColor("RANDOM")
+    .setFooter("DJ Dani")
+channel.createMessage(embedaa)
+  })
 client.on("rawWS", async(packet) => {
     if (packet.t === "INTERACTION_CREATE" && packet.d.type === 3) {
         console.log("Id da guild" + packet.d.guild_id);
