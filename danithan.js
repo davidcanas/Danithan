@@ -21,7 +21,23 @@ const client = new Danithan("NzkzMDYzNTc0ODM0MTE4Njk2.X-m0Ag.xbI8YrlSZ9WIKu0Rut5
 client.startLoaders();
 client.connect();
 const { Manager } = require('erela.js');
+ function MsToDate(ms) {
+      let seg = Math.floor(ms/1000)
+      let minutes = 0
+      let hours = 0
+      let days = 0
 
+      while (seg >= 60) minutes++, seg-=60
+      while (minutes >= 60) hours++, minutes-=60
+      while (hours >= 24) days++, hours-=24
+      return {
+      dias: days,
+      horas: hours,
+      minutos: minutes,
+      segundos: seg
+      }
+  };
+  
 const nodes = [
     {
         identifier: 'Danithan Caraibas Node',
@@ -69,7 +85,7 @@ client.manager.on("trackStart", (player, track) => {
     .setTitle("💿 Tocando Agora")
     .addField("🎵 Nome da música:", `[${track.title}](${track.uri})`)
     .addField("👤 Pedido por:", track.requester.username)
-   .addField("⌛ Duração", ctx.MsToDate(track.duration))
+   .addField("⌛ Duração", MsToDate(track.duration))
   .setColor("RANDOM")
     .setFooter("💻")
 channel.createMessage(embedaa)
