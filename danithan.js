@@ -85,7 +85,7 @@ client.manager.on("trackStart", (player, track) => {
     .setTitle("💿 Tocando Agora")
     .addField("🎵 Nome da música:", `[${track.title}](${track.uri})`)
     .addField("👤 Pedido por:", track.requester.username)
-   .addField("⌛ Duração", MsToDate(track.duration))
+  // .addField("⌛ Duração", MsToDate(track.duration))
   .setColor("RANDOM")
     .setFooter("💻")
 channel.createMessage(embedaa)
