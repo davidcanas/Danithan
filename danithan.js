@@ -62,7 +62,12 @@ client.manager.on('nodeConnect', (node) => {
 client.on('error', async(err) => {
     console.error("[Erro Recebido da index.js]: " + err);
 });
-
+client.manager.on("trackStart", (player, track) => {
+    const channel = client.getChannel(player.textChannel);
+    // Send a message when the track starts playing with the track name and the requester's Discord tag, e.g. username#discriminator
+    channel.createMessage(`Now playing: \`${track.title}\`, requested by \`${track.requester.username}\`.`);
+  });
+  
 client.on("rawWS", async(packet) => {
     if (packet.t === "INTERACTION_CREATE" && packet.d.type === 3) {
         console.log("Id da guild" + packet.d.guild_id);
