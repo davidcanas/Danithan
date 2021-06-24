@@ -1,5 +1,4 @@
 const Event = require("../Structures/Event");
-const CommandContext = require("../Structures/CommandContext");
 
 module.exports = class messageUpdate extends Event {
     constructor(client) {

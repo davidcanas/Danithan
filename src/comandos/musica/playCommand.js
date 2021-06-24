@@ -24,7 +24,7 @@ module.exports = class tugafmCommand extends Command {
              res = await this.client.manager.search(search, ctx.msg.author);
              // Check the load type as this command is not that advanced for basics
              if (res.loadType === "LOAD_FAILED") throw res.exception;
-             else if (res.loadType === "PLAYLIST_LOADED") throw { message: "Playlists são pros gays." };
+             else if (res.loadType === "PLAYLIST_LOADED") throw { message: "Playlists não são suportadas de momento" };
            } catch (err) {
              return ctx.msg.channel.createMessage(`Erro: ${err.message}`);
            }
@@ -43,5 +43,5 @@ module.exports = class tugafmCommand extends Command {
            // Checks if the client should play the track if it's the first one added
            if (!player.playing) player.play()
        
-           return ctx.msg.channel.createMessage(`Adicionando ${res.tracks[0].title}.`);
+           return ctx.msg.channel.createMessage(`Adicionando ${res.tracks[0].title} á lista `);
           }}
