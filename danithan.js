@@ -82,7 +82,7 @@ client.manager.on("trackStart", (player, track) => {
     const channel = client.getChannel(player.textChannel);
     // Send a message when the track starts playing with the track name and the requester's Discord tag, e.g. username#discriminator
     const embedaa = new EthanEmbed() 
-    .setTitle("💿 Tocando Agora")
+    .setTitle("<a:lab_song:680221744757342359>  Tocando Agora")
     .addField("🎵 Nome da música:", `[${track.title}](${track.uri})`)
     .addField("👤 Pedido por:", track.requester.username)
   // .addField("⌛ Duração", MsToDate(track.duration))
