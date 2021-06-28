@@ -64,11 +64,16 @@ client.on('rawWS', d => client.manager.updateVoiceState(d));
 client.once('ready', () => {
   client.manager.init(client.user.id);
 });
+client.lavalinkPings = new Map();
+
 client.manager.on('nodeConnect', (node) => {
+	client.lavalinkPings.set(node.identifier, {});
+
 	const sendPing = () => {
 		node.send({
 			op: 'ping'
-		})
+		});
+		client.lavalinkPings.get(node.identifier).lastPingSent = Date.now();
 	};
 
 	sendPing();
@@ -76,6 +81,18 @@ client.manager.on('nodeConnect', (node) => {
 		sendPing();
 	}, 45000);
 });
+
+client.manager.on('nodeError', (node, error) => {
+	if (error && error.message.includes('"pong"')) {
+		const lavalinkPing = client.lavalinkPings.get(node.identifier);
+		lavalinkPing.ping = Date.now() - lavalinkPing.lastPingSent;
+		return;
+	}
+	console.log(`[Lavalink]: Ocorreu um erro no node ${node.identifier}.\nErro: ${error.message}`);
+});
+
+//Para usar o valor do ping do lavalink num comando por exemplo é so usar
+//client.lavalinkPings.get(client.manager.nodes.first().identifier).ping
 client.on('error', async(err) => {
     console.error("[Erro Recebido da index.js]: " + err);
 });
