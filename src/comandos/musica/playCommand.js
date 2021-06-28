@@ -65,6 +65,7 @@ module.exports = class tugafmCommand extends Command {
          
            // Checks if the client should play the track if it's the first one added
            if (!player.playing) player.play()
-          }     
+            
            return ctx.msg.channel.createMessage(`Adicionando ${res.tracks[0].title} á lista `);
+          }
           }}
