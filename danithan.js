@@ -21,6 +21,7 @@ const client = new Danithan("NzkzMDYzNTc0ODM0MTE4Njk2.X-m0Ag.xbI8YrlSZ9WIKu0Rut5
       
 client.startLoaders();
 client.connect();
+client.cache = {}
 const { Manager } = require('erela.js');
  function MsToDate(ms) {
       let seg = Math.floor(ms/1000)

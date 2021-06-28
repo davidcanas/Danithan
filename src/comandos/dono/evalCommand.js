@@ -19,7 +19,16 @@ constructor(client) {
     })
 }
 async execute(ctx) {
-      try {
+  if (this.client.cache.lastEvalMsg) {
+    const mensagem = ctx.msg.channel.messages.get(this.client.cache.lastEvalMsg) 
+    if (mensagem) {
+      mensagem.delete()
+    
+    }
+this.client.lastEvalMsg = null
+  }   
+  try {
+    ctx.msg.delete()
         if (ctx.msg.author.id !== '791347446298312724' && ctx.msg.author.id !== '718078381199065150' && ctx.msg.author.id !== '852650555254767676') {
             return ctx.msg.channel.createMessage('Apenas meu criador');
         }
@@ -77,7 +86,7 @@ this.client.createMessage(ctx.msg.channel.id , {
     .setTitle("Ocorreu um erro:")
     .setDescription(`\`\`\`js\n${e}\n\`\`\``)
     .setColor("RED")
-    this.client.createMessage(ctx.msg.channel.id, {
+  let msg = await this.client.createMessage(ctx.msg.channel.id, {
       embed: errBed.embed,
       components: [
         {
@@ -96,7 +105,7 @@ this.client.createMessage(ctx.msg.channel.id , {
         }
       ]
     })
-    
+    this.client.cache.lastEvalMsg = msg.id
  
     
         
