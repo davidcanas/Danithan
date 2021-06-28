@@ -87,7 +87,7 @@ client.manager.on("trackStart", (player, track) => {
     .addField("👤 Pedido por:", track.requester.username)
   // .addField("⌛ Duração", MsToDate(track.duration))
   .setColor("RANDOM")
-    .setFooter("💻")
+    .setFooter("💻 | Sistema de música Danithan")
 channel.createMessage(embedaa)
   })
 client.on("rawWS", async(packet) => {
