@@ -18,7 +18,7 @@ const client = new Danithan("NzkzMDYzNTc0ODM0MTE4Njk2.X-m0Ag.xbI8YrlSZ9WIKu0Rut5
     defaultImageFormat: 'png', 
     defaultImageSize: 2048
 });
-      
+module.exports = client
 client.startLoaders();
 client.connect();
 client.cache = {}
@@ -131,4 +131,4 @@ client.on("rawWS", async(packet) => {
         };   
     };
 });
-module.exports = client
+
