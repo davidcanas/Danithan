@@ -109,7 +109,7 @@ client.manager.on("trackStart", async(player, track) => {
       .setFooter("💻 | Sistema de música Danithan")
 const mensagem = await channel.createMessage(embedaa)
 setTimeout(() => {
-    const verif = client.getChannel(player.textChannel).messages.get(mensagem)
+    const verif = client.getChannel(player.textChannel).messages.get(mensagem.id)
     if (verif) verif.delete()
   }, 30000);
   })
