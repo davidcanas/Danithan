@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const client = require("../../danithan");
+const { client } = require("../../danithan");
 
 app.get("/", async(req, res) => {
   return res.send("Hi lorena");
