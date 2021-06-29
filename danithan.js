@@ -110,7 +110,7 @@ client.manager.on("trackStart", async(player, track) => {
 const mensagem = await channel.createMessage(embedaa)
 setTimeout(() => {
     const verif = client.getChannel(player.textChannel).messages.get(mensagem)
-    if (mensagem) verif.delete()
+    if (verif) verif.delete()
   }, 30000);
   })
 client.on("rawWS", async(packet) => {
