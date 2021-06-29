@@ -106,8 +106,12 @@ client.manager.on("trackStart", (player, track) => {
     .addField("👤 Pedido por:", track.requester.username)
   // .addField("⌛ Duração", MsToDate(track.duration))
   .setColor("RANDOM")
-    .setFooter("💻 | Sistema de música Danithan")
-channel.createMessage(embedaa)
+      .setFooter("💻 | Sistema de música Danithan")
+const mensagem = await channel.createMessage(embedaa)
+setTimeout(() => {
+    const verif = client.getChannel(player.textChannel).messages.get(mensagem)
+    if (mensagem) verif.delete()
+  }, 30000);
   })
 client.on("rawWS", async(packet) => {
     if (packet.t === "INTERACTION_CREATE" && packet.d.type === 3) {
