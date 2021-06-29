@@ -97,7 +97,7 @@ client.manager.on('nodeError', (node, error) => {
 client.on('error', async(err) => {
     console.error("[Erro Recebido da index.js]: " + err);
 });
-client.manager.on("trackStart", (player, track) => {
+client.manager.on("trackStart", async(player, track) => {
     const channel = client.getChannel(player.textChannel);
     // Send a message when the track starts playing with the track name and the requester's Discord tag, e.g. username#discriminator
     const embedaa = new EthanEmbed() 
