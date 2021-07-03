@@ -1,1 +1,1 @@
-web: node danithan.js
+Worker: node danithan.js
