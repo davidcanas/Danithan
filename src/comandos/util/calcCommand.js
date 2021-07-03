@@ -46,7 +46,7 @@ if (expr === "null" || expr === "undefined" || expr.includes("false") || expr.in
         }catch (err) {
             return ctx.msg.channel.createMessage(ctx.t("commands:calc.invalid"));
         }
-    {}    if (result === Infinity || result === -Infinity || result.toString() === 'NaN') result = 'Calculo Impossível';
+    {}    if (result === Infinity || result === -Infinity || result.toString() === 'NaN') result = 'Calculo Impossível ';
         if (typeof result === 'function') return ctx.msg.channel.createMessage(ctx.t("commands:calc.invalid"));
 
         const embed = new EthanEmbed()

@@ -11,7 +11,7 @@ module.exports = class ready extends Event {
 	    let activities = [
 			`Utilize d/help para obter ajuda`,
 			`Estou em ${this.client.guilds.size} servidores!`,
-			` Versão 1.2 | Atualizações em breve`,
+			` Versão 1.2 | Grande atualização em breve`,
 			`😃 Já Conheço ${this.client.users.size} usuários !`,
 		     `🏳️‍🌈 | #OrgulhoLGBTQIA+ | #MêsDoOrgulhoLGBTQIA+ `
 		],
@@ -21,7 +21,7 @@ module.exports = class ready extends Event {
                 name: `${activities[i++ % activities.length]}`,
                 type: 0
             });
-        }, 17000);
+        }, 15000);
         console.log(`\x1b[36m[${new Date().toUTCString()}] Bot Online \x1b[0m`);   
     };
 };

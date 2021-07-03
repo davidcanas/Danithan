@@ -1,15 +1,10 @@
-
-require('dotenv').config({
-    path: '.env'
-});
-//A 
+require("dotenv").config() 
 const Danithan = require('./src/Danithan');
 const { EthanEmbed } = require("ethanutils")
 require("./src/Structures/DaniError");
-require("./src/api/app");
 
 
-const client = new Danithan("NzkzMDYzNTc0ODM0MTE4Njk2.X-m0Ag.xbI8YrlSZ9WIKu0Rut5RE1AhYzw", {
+const client = new Danithan("Bot " + process.env.BOT_TOKEN, {
     allowedMentions: {
         everyone: false
     },
@@ -45,7 +40,7 @@ const nodes = [
         identifier: 'Danithan Caraibas Node',
         host: 'lavalink-danithan.herokuapp.com',
         port: 80,
-        password: 'danithangay',
+        password: process.env.LAVALINK_PASS,
         retryAmount: 30,
         retryDelay: 3000,
         secure: false
@@ -60,7 +55,6 @@ client.manager = new Manager({
   }
 });
 
-client.on('rawWS', d => client.manager.updateVoiceState(d));
 
 client.once('ready', () => {
   client.manager.init(client.user.id);
@@ -114,6 +108,7 @@ setTimeout(() => {
   }, 30000);
   })
 client.on("rawWS", async(packet) => {
+    client.manager.updateVoiceState(packet)
     if (packet.t === "INTERACTION_CREATE" && packet.d.type === 3) {
         console.log("Id da guild" + packet.d.guild_id);
         console.log("Channel" + packet.d.channel_id);

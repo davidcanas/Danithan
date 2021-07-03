@@ -23,22 +23,8 @@ module.exports = new Schema({
     type: String,
     default: undefined
   },
-  superMercado: {
-    dinheiro: {
-      type: Number,
-      default: 0
-    },
-    nome: {
-      type: String
-    },
-    dono: {
-      type: String
-    },
-    ativado: {
-      type: Boolean,
-      default: false
-    },
-  }
+   
+  
 }, {
   versionKey: false
 });

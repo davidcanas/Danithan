@@ -1,5 +1,10 @@
 {
 "didYouMean": {
    "msg": "Lo siento, no pude encontrar el comando `{{Cmd}}`\n¿Quiso decir `{{didYouMean}}`?" 
+},
+"mention": {
+   "title": "❓ [Tradução espanhola incompleta]",
+   "description": "Hello **{{UserTag}}** my prefix is {{Prefix}} use {{Prefix}}ayuda for more information!",
+   "footer": "React with ❓ for see all my commands ! "
 }
 }

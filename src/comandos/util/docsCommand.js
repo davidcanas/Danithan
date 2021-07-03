@@ -14,7 +14,14 @@ constructor(client) {
 }
 async execute(ctx) {
  if (!ctx.args[0]) return ctx.msg.channel.createMessage("Uso: d/docs <Parâmetro>")
- let abacaxi = await fetch(`https://erisdocsapi2.herokuapp.com/docs?token=${process.env.ERIS_DOCS}&search=${encodeURIComponent(ctx.args.join(" "))}`).then(batata => batata.json()) 
+ let erislink;
+ let erislinktest = await fetch("https://erisdocsapi.herokuapp.com/").then(res => res.status)
+ if (erislinktest === 200) {
+     erislink = "erisdocsapi"
+ } else {
+     erislink = "erisdocsapi2"
+ } 
+ let abacaxi = await fetch(`https://${erislink}.herokuapp.com/docs?token=${process.env.ERIS_DOCS}&search=${encodeURIComponent(ctx.args.join(" "))}`).then(batata => batata.json()) 
  if (abacaxi.error) return ctx.msg.channel.createMessage("Não encontrei nada")
  ctx.msg.channel.createMessage({embed: abacaxi})
 }}

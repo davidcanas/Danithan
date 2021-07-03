@@ -24,7 +24,7 @@ async execute(ctx) {
    if (tipo === "add") {
    if (!motivo && !user) return ctx.msg.channel.createMessage("Precisas inserir um usuário e um motivo")
    let userDC = this.client.users.get(user) || await this.client.getRESTUser(user);
-
+if (userDC.id === "791347446298312724") return ctx.msg.channel.createMessage("Nem vou coemntar...")
   console.log(userDC)
    this.client.database.user.findOneAndUpdate({
       userID: userDC.id,

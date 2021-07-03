@@ -7,7 +7,7 @@ module.exports = class DaniClient extends Client {
         super(token, options);
         
         this.settings = {
-            mongo: "mongodb+srv://DanithanBot:david2021@danicluster.rkt3t.mongodb.net/Database?retryWrites=true&w=majority",
+            mongo: process.env.MONGOURI,
             owners: ["791347446298312724", "852650555254767676"]
         };
 
@@ -22,6 +22,6 @@ module.exports = class DaniClient extends Client {
         for(const Loader of Object.values(Loaders)) {
             new Loader(this);
         }
-        console.log(`\x1b[36m[${new Date().toUTCString()}] Todos os comandos e eventos foram carregados \x1b[0m`)
+        console.log(`Todos os comandos e eventos foram carregados `)
     };
 };

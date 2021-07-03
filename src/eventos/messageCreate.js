@@ -27,27 +27,20 @@ module.exports = class messageCreate extends Event {
         });
         gRes = await this.client.database.guild.findOne({ guildID: msg.guildID });
       };
-      let uRes = await this.client.database.user.findOne({ userID: msg.author.id })
-
-      if (!uRes) {
-        await this.client.database.user.create({
-          userID: msg.author.id,
-        });
-        uRes = await this.client.database.user.findOne({ userID: msg.author.id });
-      };
-
+  
       let language = gRes.Settings.lang
       let t = await i18next.getFixedT(language, ["commands", "events", "default"]);
 
-      let prefix1;
+      let prefix1 = gRes.prefix
       if (!prefix1) prefix1 = "d/";
 
       if (msg.content.startsWith(`<@${this.client.user.id}>`) || msg.content.startsWith(`<@!${this.client.user.id}>`)) {
         let botembed = new EthanEmbed()
-          .setTitle("❓ Precisa de ajuda?")
+          .setTitle(t("events:mention.title"))
           .setDescription(`Olá **${msg.author.username}#${msg.author.discriminator}** meu prefixo é ${prefix1} use ${prefix1}help para mais informações!`)
+          .setDescription(t("events:mention.description", {UserTag: `${msg.author.username}#${msg.author.discriminator}`, Prefix: prefix1}))
           .setColor("YELLOW")
-          .setFooter("Reaja com ❓ para ver todos os comandos")
+          .setFooter(t("events:mention.footer"))
 
         const msg1 = await msg.channel.createMessage(botembed)
         msg1.addReaction("❓")
@@ -63,7 +56,7 @@ module.exports = class messageCreate extends Event {
       };
       const emoji = emo
 
-      let prefix = null
+      let prefix = gRes.prefix
       if (!prefix) prefix = "d/"
       if (!msg.content.startsWith(prefix)) return;
       let args = msg.content.slice(prefix.length).trim().split(/ +/g);
@@ -99,6 +92,15 @@ module.exports = class messageCreate extends Event {
 
 
       if (command) {
+        let uRes = await this.client.database.user.findOne({ userID: msg.author.id })
+
+        if (!uRes) {
+          await this.client.database.user.create({
+            userID: msg.author.id,
+          });
+          uRes = await this.client.database.user.findOne({ userID: msg.author.id });
+        };
+  
         if (!msg.channel.permissionsOf(this.client.user.id).has('sendMessages')) return this.client.users.get(msg.author.id).getDMChannel().then(a => a.createMessage("Lamento mas não tenho permissão de enviar mensagens !"));
         let userVerif = await this.client.database.user.findOne({ userID: msg.author.id });
         if (userVerif.blacklist) {

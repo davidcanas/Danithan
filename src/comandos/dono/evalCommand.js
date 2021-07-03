@@ -7,7 +7,7 @@ const ExecutorStupidError = require("../../Structures/DaniError")
 const guildDB = require("../../Database/models/guildDB")
 //const firedb = firebase.database()
 const Command = require("../../Structures/Command")
-const { Type } = require('@anishshobith/deeptype');
+
 module.exports = class evalCommand extends Command {
 constructor(client) {
     super(client,  { 
@@ -46,15 +46,14 @@ this.client.lastEvalMsg = null
 const stop = process.hrtime(start);
     if(code.length > 1750) {
   
-   return ctx.msg.channel.createMessage(`Como o codigo passou dos 1800 caracteres envio em anexo uma "file" com o código !\n||(Tempo de Execução: ${((stop[0] * 1e9) + stop[1]) / 1e6}ms ||`, {
+   return ctx.msg.channel.createMessage(`Como o codigo passou dos 1800 caracteres envio em anexo uma "file" com o código !\n||(Tempo de Execução: ${((stop[0] * 1e9) + stop[1]) / 1e6}ms )||`, {
 name: 'eval.txt',
 file: Buffer.from(code)
 })
     }
-    const tipo = new Type(code).is
     const evalBed = new EthanEmbed() 
     .setTitle("Eval Executado:")
-    .setDescription(`\`\`\`js\n${code}\n\`\`\`\n**Tempo de Execução:**\n\`\`\`\n${((stop[0] * 1e9) + stop[1]) / 1e6}ms (${tipo})\n\`\`\``)
+    .setDescription(`\`\`\`js\n${code}\n\`\`\`\n**Tempo de Execução:**\n\`\`\`\n${((stop[0] * 1e9) + stop[1]) / 1e6}ms \n\`\`\``)
     
     .setColor("GREEN")
 this.client.createMessage(ctx.msg.channel.id , {

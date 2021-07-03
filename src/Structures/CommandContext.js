@@ -6,17 +6,7 @@ module.exports = class CommandContext {
       this.t = t;
       this.emoji = emoji;
     };
-    async findUser(query) {
-        let u;
-
-        u = this.client.users.get(query.replace(/[<>@!]/gi, "")) || await this.client.getRESTUser(query);
-        if (!u) return "Usuário não encontrado";
-        u.tag = `${u.username}#${u.discriminator}`;
-        return u;
-    }
-    random(arr) {
-        return arr[Math.floor(Math.random() * arr.length)];
-    }
+ 
     MsToDate(ms){
       let seg = Math.floor(ms/1000)
       let minutes = 0
