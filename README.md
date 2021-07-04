@@ -23,4 +23,4 @@ Contrinuindo pode ganhar uma badge exclusiva !
 
 [D4rkb](https://github.com/davidffa) - Função `MsToDate`, configuração do [lavalink](https://www.notion.so/Heroku-Lavalink-35a42e309e84419b9958f77bd9e7359f)
 
--Caso falte referir alguma coisa faça um pull request
+_Caso falte referir alguma coisa faça um pull request_
