@@ -1,11 +1,12 @@
 const { EthanEmbed } = require("ethanutils")
 const Command = require("../../Structures/Command")
 
-module.exports = class tugafmCommand extends Command {
+module.exports = class playCommand extends Command {
   constructor(client) {
     super(client, {
-      name: "tugafm",
-      aliases: ["play"],
+      name: "play",
+      description: "Toca uma música",
+      aliases: ["tocar"],
       cooldown: 0,
       category: "Music",
       devOnly: false

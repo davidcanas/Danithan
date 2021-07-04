@@ -1,4 +1,4 @@
-//botinfo pt 1 
+
 const { EthanEmbed } = require("ethanutils")
 
 const Command  = require("../../Structures/Command")
@@ -32,7 +32,7 @@ async execute(ctx) {
     .addField(`♦️ Comandos:`, `${cmd}`)
  .addField("📅 Criado em:", "**24  de dezembro 2020**")
   .addField('__⚙️CPU__:', `**${cpuValor}%**`)
-.addField('__🗜️Ram__:', `**${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}MB**`)
+.addField('__🗜️Ram__:', `**${(process.memoryUsage().rss / 1024 / 1024).toFixed(0)}MB**`)
  .setColor("BLUE")
  .setFooter(`Danithan`, this.client.user.dynamicAvatarURL())
  .setThumbnail(this.client.user.dynamicAvatarURL())

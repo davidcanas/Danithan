@@ -1,3 +1,4 @@
+//If you are the owner of one of these functions and you haven't been identified/want to change something in the credits, just give a pull request ;)
 module.exports = class CommandContext {
     constructor(client, msg, args, t, emoji, ) {
       this.client = client;
@@ -7,6 +8,7 @@ module.exports = class CommandContext {
       this.emoji = emoji;
     };
  
+    //MsToDate by D4rkB
     MsToDate(ms){
       let seg = Math.floor(ms/1000)
       let minutes = 0
@@ -23,6 +25,7 @@ module.exports = class CommandContext {
       segundos: seg
       }
   };
+  //getMoreCommonChars By 5antos
   getMoreCommonChars(string) {
     const chars = {}
     for(var i = 0; i < string.length; i++) {
@@ -32,6 +35,7 @@ module.exports = class CommandContext {
     }
     return Object.entries(chars).sort((a,b) => b[1].count - a[1].count)[0][1].char
   }
+ //abbreviateNumber By 5antos
   abbreviateNumber(number, precision=2) {
     const suffsFromZeros = { 0:'', 3:'k', 6:'M', 9:'G', 12:'T' }
     const { length } = number.toString()

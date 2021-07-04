@@ -6,6 +6,7 @@ constructor(client) {
     super(client,  { 
         name: "help", 
         aliases: ["ajuda", "ayuda"],
+        description: "Mostra os meus comandos",
          category: "Info",
         cooldown: 0,
         devOnly: false
@@ -22,6 +23,7 @@ async execute(ctx) {
 .addField("Informações", infoCommand)
 .addField("Música", musicCommand)
 .setFooter("AMEN")
+.setColor("GREEN")
 ctx.msg.channel.createMessage(help)  
 }
 

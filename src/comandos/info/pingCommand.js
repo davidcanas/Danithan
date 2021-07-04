@@ -22,17 +22,12 @@ async execute(ctx) {
         const stop2 = process.hrtime(start1);
 
         const pingApi = Math.round(((stop2[0] * 1e9) + stop2[1]) / 1e6);
-        const pingCor = Media(`${this.client.shards.get(0).latency} + ${pingDB} + ${pingApi}`)
-        let cor;
-        if (pingCor < 140) cor = "GREEN"
-        if (pingCor > 140) cor = "YELLOW"
-        if (pingCor > 170) cor = "RED"
-        if (!cor) cor = "DEFAULT"
+  
     const pingEmbed = new EthanEmbed()
     .setTitle("🏓 Pong")
     .setDescription(`Ping: ${this.client.shards.get(0).latency}ms\nPing da DB: ${pingDB} ms\nTempo de resposta ${pingApi}ms`)
     .setFooter(`${ctx.msg.author.username}#${ctx.msg.author.discriminator}`, ctx.msg.author.dynamicAvatarURL())
-    .setColor(cor)
+    .setColor("RED")
   
     mensagemApi.edit({ content: '', embed: pingEmbed.embed})
     
