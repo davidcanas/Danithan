@@ -10,8 +10,8 @@ module.exports = class voiceChannelLeave extends Event {
     async run(member, oldChannel) {
         const player = this.client.manager.players.get(member.guild.id);
         if (!player) return;
-        if (!member.bot && oldChannel.id === player.voiceChannel && !oldChannel.voiceMembers.filter(m => !m.bot).length && oldChannel.id !== process.env.VOICECHANNELID) {
+        if (!member.bot && oldChannel.id === player.voiceChannel && !oldChannel.voiceMembers.filter(m => !m.bot).length) {
             player.destroy()
-            const msg = await this.client.createMessage(player.textChannel, 'Triste fiquei sozinho por isso adeus até nunca!');
+         this.client.createMessage(player.textChannel, 'Fiquei sozinho por isso sai do canal de voz ');
         }
     }}

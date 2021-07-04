@@ -120,9 +120,9 @@ module.exports = class messageCreate extends Event {
       if (command) {
         command.execute(ctx);
 
-        const cmdsUsed = await this.client.database.bot.findOne({ botID: this.client.user.id });
-        ++cmdsUsed.commands;
-        cmdsUsed.save();
+        const bruh = await this.client.database.bot.findOne({ botID: this.client.user.id });
+        ++bruh.commands;
+        bruh.save();
 
         const commando = new EthanEmbed()
           .setTitle('Log de Comandos')
