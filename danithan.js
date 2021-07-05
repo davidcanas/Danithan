@@ -107,7 +107,10 @@ setTimeout(() => {
     if (verif) verif.delete()
   }, 30000);
   })
-client.on("rawWS", async(packet) => {
+  client.manager.on('trackError', (player, track, message) => {
+console.log(message.error)
+  })
+    client.on("rawWS", async(packet) => {
     client.manager.updateVoiceState(packet)
     if (packet.t === "INTERACTION_CREATE" && packet.d.type === 3) {
         console.log("Id da guild" + packet.d.guild_id);

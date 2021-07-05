@@ -1,10 +1,10 @@
 const { EthanEmbed } = require("ethanutils")
 const Command = require("../../Structures/Command")
-module.exports = class botinfoCommand extends Command {
+module.exports = class lavalinkCommand extends Command {
     constructor(client) {
         super(client, {
-            name: "botinfo",
-            aliases: ["infobot"],
+            name: "lavalink",
+            aliases: ["lv"],
             category: "Info",
             cooldown: 0,
             devOnly: false
