@@ -26,7 +26,7 @@ module.exports = new Schema({
     Settings: {
         lang: {
             type: String,
-            default: "pt-BR"
+            default: "pt"
         },
         gay: {
             type: Boolean,

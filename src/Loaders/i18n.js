@@ -6,12 +6,12 @@ const { readdirSync } = require('fs');
 module.exports = class LocaleStructure {
     constructor(client) {
         this.client = client;
-        this.languages = ["pt-BR", "en-US", "es-ES"];
+        this.languages = ["pt", "en", "es"];
 
         i18next.use(backend).init({
             initImmediate: false,
             ns: ["commands", "events", "default"],
-            fallbackLng: 'pt-BR',
+            fallbackLng: 'pt',
             preload: readdirSync("./src/lang/"),
             initImmediate: false,
             interpolation: { escapeValue: false },

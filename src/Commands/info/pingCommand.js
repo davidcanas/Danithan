@@ -42,7 +42,7 @@ async execute(ctx) {
          if (event.emoji.id === "862349947814019072") {
             const pingHelpEmbed = new EthanEmbed()
             .setTitle("🏓 Ajuda do Comando de Ping")
-            .setDescription(`<:clock2:862344276028555264> - \`Representa o Tempo de resposta do Danithan em ms\`\n<:internet:797178541702774834> \`Representa o Ping da API do discord\`\n<:MongoDB:862343156854423552> \`Representa o ping da Databse (MongoDB)\`\n<:lava:862345050667089950> \`Representa o ping do lavalink\``)
+            .setDescription(`<:clock2:862344276028555264> \`Representa o Tempo de resposta do Danithan em ms\`\n<:internet:797178541702774834> \`Representa o Ping da API do discord\`\n<:MongoDB:862343156854423552> \`Representa o ping da Database (MongoDB)\`\n<:lava:862345050667089950> \`Representa o ping do lavalink\``)
             .setFooter(`${ctx.msg.author.username}#${ctx.msg.author.discriminator}`, ctx.msg.author.dynamicAvatarURL())
             .setColor("RED")
             mensagemApi.edit({content: "", embed: pingHelpEmbed.embed})

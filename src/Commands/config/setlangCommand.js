@@ -16,15 +16,15 @@ let langargs = ctx.args[0]
 if (!langargs) return ctx.msg.channel.createMessage("Insira uma linguagem:\n`en, es, pt`")
  if (langargs !== "pt" && langargs !== "es" && langargs !== "en") return ctx.msg.channel.createMessage("Linguagem Inválida | Lista de linguagens disponíveis:\n`pt, es, en`")
  if (langargs === "pt") {
-   langargs = "pt-BR"
+   langargs = "pt"
    setada = "Português"
  }
  if (langargs === "es") {
-   langargs = "es-ES"
+   langargs = "es"
    setada = "Español"
  }
  if (langargs === "en") {
-   langargs = "en-US"
+   langargs = "en"
    setada = "English"
  }
  
