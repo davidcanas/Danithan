@@ -40,11 +40,10 @@ module.exports = class playCommand extends Command {
     if (res.loadType === 'PLAYLIST_LOADED') {
       const playlist = res.playlist;
 
-      res.tracks.forEach(poh =>{
+      for (let poh of res.tracks)
         player.queue.add(poh);
-      })
-       
-
+      /* ^ Thank you D4rkB ^ */
+      
       // Verifica se o bot está tocando caso não esteja ele toca
       if (!player.playing)
         player.play();

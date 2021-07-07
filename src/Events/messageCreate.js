@@ -123,7 +123,7 @@ module.exports = class messageCreate extends Event {
         const bruh = await this.client.database.bot.findOne({ botID: this.client.user.id });
         ++bruh.commands;
         bruh.save();
-
+//THank you d4rkb 
         const commando = new EthanEmbed()
           .setTitle('Log de Comandos')
           .addField("Username", `${msg.author.username}#${msg.author.discriminator}`)
