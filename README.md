@@ -1,10 +1,12 @@
 <div align="center">
-If you dont speak portuguese see this:
-[English Readme](https://github.com/CanasDev/Danithan/tree/master/Readmes/README_EN.md)
-[Spanish Readme](https://github.com/CanasDev/Danithan/tree/master/Readmes/REAMDE_ES.md)
 
 <h1>Danithan</h1>
 </div>
+_If you dont speak portuguese see this:_
+
+[English Readme](https://github.com/CanasDev/Danithan/tree/master/Readmes/README_EN.md)
+[Spanish Readme](https://github.com/CanasDev/Danithan/tree/master/Readmes/REAMDE_ES.md)
+
 Src do Danithan - Um bot multifuncional em desenvolvimento ! 
 
 # 🍕 • Licença
