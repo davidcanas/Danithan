@@ -22,7 +22,11 @@
    "permuser": "You need `manageMessages` permission to use this command !",
    "permbot": "I need `manageMessages` permission",
    "cleaned1": "I cleaned {{msgn}} messages\n\nI couldn't delete anymore due to discord",
-   "cleaned2": "I cleaned {{msgn}} messages"
- }
+   "cleaned2": "I cleaned {{msgn}} messages",
+   "args": "Say a number of messages to clean",
+   "number": "Please say an valid number",
+   "limit": "I can only clear between 2 and 200 messages at a time."
+ 
+  }
 
 }

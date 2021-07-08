@@ -1,15 +1,21 @@
 <div align="center">
-
+If you dont speak portuguese see this:
+[English Readme](https://github.com/CanasDev/Danithan/tree/master/Readmes/README_EN.md)
+[Spanish Readme](https://github.com/CanasDev/Danithan/tree/master/Readmes/REAMDE_ES.md)
 
 <h1>Danithan</h1>
 </div>
 Src do Danithan - Um bot multifuncional em desenvolvimento ! 
 
 # 🍕 • Licença
-Lembrando que este projeto está Licensiado sobre a Licença **GNU AFFERO GENERAL PUBLIC LICENSE**
+Lembrando que este projeto está Licensiado sobre a Licença **GNU GENERAL PUBLIC LICENSE V3**
 
 [Saiba Mais Aqui](https://github.com/Danithan/DanithanBot/blob/master/LICENSE)  
 
+# 😀 Traduzindo 
+Você pode nos ajudar traduzindo o Danithan acedendo aos respetivos ficheiros de tradução e traduzindo os mesmos 
+[Traduza para Inglês](https://github.com/CanasDev/Danithan/tree/master/src/lang/en)
+[Traduza Para Espanhol](https://github.com/CanasDev/Danithan/tree/master/src/lang/es)
 
 # ❓ • Como Contribuir?
 Você pode contribuir ajudando a melhorar o Danithan

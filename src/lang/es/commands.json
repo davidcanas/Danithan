@@ -6,8 +6,7 @@
    "conf": "você quer mesmo banir",
    "msgban": "📍┊ Caso queira uma punição silenciosa reaja com 👌",
    "footer": "Reacciona con 🛑 para confirmar",
-   "silenceban": "🤫 Yo bani {{UserTag}} silenciosamente quando me pediste",
-   "d4rkoi": "Eu troquei reaga para reaja como você pediu"
+   "silenceban": "🤫 Yo bani {{UserTag}} silenciosamente quando me pediste"
    
  },
  "setlang": {
@@ -25,6 +24,10 @@
   "permuser": "É necessária a permissão `manageMessages` para executar este comando",
   "permbot": "Eu não tenho a permissão `manageMessages`",
   "cleaned1": "Eu apaguei {{msgn}} mensagens\n\nEu não consegui apagar mais devido ao discord",
-  "cleaned2": "Eu apaguei {{msgn}} mensagens"
+  "cleaned2": "Eu apaguei {{msgn}} mensagens",
+  "args": "Diz um numero de mensagens para eu apagar",
+   "number": "Diz um numero válido (NaN)",
+   "limit": "Eu só consigo apagar entre 2 a 200 mensagens"
+ 
 }
 }

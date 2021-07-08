@@ -11,7 +11,7 @@
    
  },
  "setlang": {
- "args": "Modo de uso e/setlang <lingua>",
+ "args": "Modo de uso d/setlang <lingua>",
  "sucess": "Linguagem setada para {{Lang}}"
 
  },
@@ -26,6 +26,10 @@
     "permuser": "É necessária a permissão `manageMessages` para executar este comando",
     "permbot": "Eu não tenho a permissão `manageMessages`",
     "cleaned1": "Eu apaguei {{msgn}} mensagens\n\nEu não consegui apagar mais devido ao discord",
-    "cleaned2": "Eu apaguei {{msgn}} mensagens"
+    "cleaned2": "Eu apaguei {{msgn}} mensagens",
+    "args": "Diz um numero de mensagens para eu apagar",
+    "number": "Diz um numero válido (NaN)",
+    "limit": "Eu só consigo apagar entre 2 a 200 mensagens"
   }
+
 }
