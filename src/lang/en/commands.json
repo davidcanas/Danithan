@@ -5,9 +5,7 @@
    "conf": "really want to ban",
    "msgban": "📍┊ If you want a silent punishment, react with 👌",
    "footer": "React with 🛑 to ban the user ",
-   "silenceban": "🤫 I'm banned {{UserTag}} silently as you asked",
-   "d4rkoi": "I changed Reaga by Reaja"
-   
+   "silenceban": "🤫 I'm banned {{UserTag}} silently as you asked"
  },
  "setlang": {
  "args": "Use: d/setlang <language>",
@@ -19,6 +17,12 @@
   "field1": "Calc:",
   "field2": "Result",
   "footer": "Learning Math !"
+ },
+ "clean": {
+   "permuser": "You need `manageMessages` permission to use this command !",
+   "permbot": "I need `manageMessages` permission",
+   "cleaned1": "I cleaned {{msgn}} messages\n\nI couldn't delete anymore due to discord",
+   "cleaned2": "I cleaned {{msgn}} messages"
  }
 
 }

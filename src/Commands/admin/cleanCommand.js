@@ -14,22 +14,22 @@ async execute(ctx) {
 
    ctx.msg.delete()
           if (!ctx.msg.channel.permissionsOf(ctx.msg.author.id).has('manageMessages')) {
-        ctx.msg.channel.createMessage('Você necessita da permissão `MANAGE_MESSAGES`');
+        ctx.msg.channel.createMessage(ctx.t("commands:clean.permuser"));
             return;
         }
 
        if (!ctx.msg.channel.permissionsOf(this.client.user.id).has('manageMessages')) {
-           ctx.msg.channel.createMessage('Não tenho a permissão `MANAGE_MESSAGES`');
+           ctx.msg.channel.createMessage(ctx.t("commands:clean.permbot"));
           return;
         }
         if (!ctx.args.length)
-            return ctx.msg.channel.createMessage(`**Uso:** d/clean [N° de 2 a 200B]`);
+            return ctx.msg.channel.createMessage(ctx.t("commands:clean.args"));
         
         const number = ctx.args[0];
         if (isNaN(number)) 
-            return ctx.msg.channel.createMessage('Insira um número');
+            return ctx.msg.channel.createMessage(ctx.t("commands:clean.number"));
         if (ctx.args[0] < 2 || ctx.args[0] >= 300) 
-            return ctx.msg.channel.createMessage('Só consigo limpar entre 2 a 200 de  mensagens ');
+            return ctx.msg.channel.createMessage(ctx.t("commands:clean.limit"));
         
         const embed = new EthanEmbed()
             .setColor('RANDOM')
@@ -39,9 +39,9 @@ async execute(ctx) {
 
       ctx.msg.channel.purge(parseInt(ctx.args[0])+1).then(async msgs => {
             if (parseInt(ctx.args[0])+1 !== msgs) {
-                embed.setDescription(`\`${msgs}\` mensagens foram aniquiladas\n\n😔 Não consegui apagar mais do que isto devido ao discord`);
+                embed.setDescription(ctx.t("commands:clean.cleaned1", {msgn: `\`${msgs}\``}));
            } else {
-                embed.setDescription(` \`${msgs}\` mensagens foram aniquiladas`);
+                embed.setDescription(ctx.t("commands:clean.cleaned2", {msgn: `\`${msgs}\``}));
             const msg = await ctx.msg.channel.createMessage(embed);  
            }
            

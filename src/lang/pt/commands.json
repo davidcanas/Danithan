@@ -21,5 +21,11 @@
   "field1": "Calculo:",
   "field2": "Resultado",
   "footer": "Aprendendo Matemática!" 
+  },
+  "clean": {
+    "permuser": "É necessária a permissão `manageMessages` para executar este comando",
+    "permbot": "Eu não tenho a permissão `manageMessages`",
+    "cleaned1": "Eu apaguei {{msgn}} mensagens\n\nEu não consegui apagar mais devido ao discord",
+    "cleaned2": "Eu apaguei {{msgn}} mensagens"
   }
 }
