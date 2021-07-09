@@ -21,7 +21,8 @@ module.exports = class DanithanDatabase {
             ...this,
             user: model("User", require('./models/userDB')),
             guild: model("Guild", require('./models/guildDB')),
-            bot: model("Bot", require('./models/botDB'))
+            bot: model("Bot", require('./models/botDB')),
+            cmds: model("Cmds", require("./models/cmds"))
         };
     };
 };
