@@ -1,5 +1,5 @@
 <div align="center">
-
+<img src="https://developer.danithan.tk/img/danithan.png" width=100>
 <h1>Danithan</h1>
  Danithan´s SRC - An Multifunctional bot in development
 </div>
