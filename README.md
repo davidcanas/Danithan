@@ -15,7 +15,9 @@ Lembrando que este projeto está Licensiado sobre a Licença **GNU GENERAL PUBLI
 
 # 😀 Traduzindo 
 Você pode nos ajudar traduzindo o Danithan acedendo aos respetivos ficheiros de tradução e traduzindo os mesmos 
+
 [Traduza para Inglês](https://github.com/CanasDev/Danithan/tree/master/src/lang/en)
+
 [Traduza Para Espanhol](https://github.com/CanasDev/Danithan/tree/master/src/lang/es)
 
 # ❓ • Como Contribuir?
