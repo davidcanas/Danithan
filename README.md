@@ -1,12 +1,12 @@
 <div align="center">
 
 <h1>Danithan</h1>
-
+Src do Danithan - Um bot multifuncional em desenvolvimento ! 
 [ 🇬🇧 English Readme](https://github.com/CanasDev/Danithan/blob/master/Readmes/README_EN.md)
 [ 🇪🇸 Spanish Readme](https://github.com/CanasDev/Danithan/blob/master/Readmes/README_ES.md)
 
 </div>
-Src do Danithan - Um bot multifuncional em desenvolvimento ! 
+
 
 # 🍕 • Licença
 Lembrando que este projeto está Licensiado sobre a Licença **GNU GENERAL PUBLIC LICENSE V3**
