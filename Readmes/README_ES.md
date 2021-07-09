@@ -1,9 +1,9 @@
 <div align="center">
 
-
+<img src="https://developer.danithan.tk/img/danithan.png" width=100>
 <h1>Danithan</h1>
-</div>
 Src de Danithan - Un bot todo en uno en desarrollo
+</div>
 
 # 🍕 • Licencia
 Recordando que este proyecto tiene la licencia **GNU GENERAL PUBLIC LICENSE V3**.
