@@ -1,5 +1,5 @@
 <div align="center">
-
+<img src="https://developer.danithan.tk/img/danithan.png">
 <h1>Danithan</h1>
 Src do Danithan - Um bot multifuncional em desenvolvimento ! 
 
