@@ -1,8 +1,8 @@
 <div align="center">
-
+<img src="https://developer.danithan.tk/img/danithan.png" width=100>
 <h1>Danithan</h1>
+ Danithan´s SRC - An Multifunctional bot in development
 </div>
-Danithan´s SRC - An Multifunctional bot in development
 
 # 🍕 • License
 This project have **GNU GENERAL PUBLIC LICENSE V3** license.
@@ -11,7 +11,9 @@ This project have **GNU GENERAL PUBLIC LICENSE V3** license.
 
 # 😀 Traduzindo 
 You can translate danithan editing the json translation files:
+
 [Translate to English](https://github.com/CanasDev/Danithan/tree/master/src/lang/en)
+
 [Translate to Spanish](https://github.com/CanasDev/Danithan/tree/master/src/lang/es)
 
 # ❓ • How to contribute?

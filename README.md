@@ -1,12 +1,13 @@
 <div align="center">
-
+<img src="https://developer.danithan.tk/img/danithan.png" width=100>
 <h1>Danithan</h1>
+Src do Danithan - Um bot multifuncional em desenvolvimento ! 
 
-[ 🇬🇧 English Readme](https://github.com/CanasDev/Danithan/tree/master/Readmes/README_EN.md)
-[ 🇪🇸 Spanish Readme](https://github.com/CanasDev/Danithan/tree/master/Readmes/REAMDE_ES.md)
+  [ 🇬🇧 English Readme](https://github.com/CanasDev/Danithan/blob/master/Readmes/README_EN.md)
+  [ 🇪🇸 Spanish Readme](https://github.com/CanasDev/Danithan/blob/master/Readmes/README_ES.md)
 
 </div>
-Src do Danithan - Um bot multifuncional em desenvolvimento ! 
+
 
 # 🍕 • Licença
 Lembrando que este projeto está Licensiado sobre a Licença **GNU GENERAL PUBLIC LICENSE V3**
@@ -15,7 +16,9 @@ Lembrando que este projeto está Licensiado sobre a Licença **GNU GENERAL PUBLI
 
 # 😀 Traduzindo 
 Você pode nos ajudar traduzindo o Danithan acedendo aos respetivos ficheiros de tradução e traduzindo os mesmos 
+
 [Traduza para Inglês](https://github.com/CanasDev/Danithan/tree/master/src/lang/en)
+
 [Traduza Para Espanhol](https://github.com/CanasDev/Danithan/tree/master/src/lang/es)
 
 # ❓ • Como Contribuir?
