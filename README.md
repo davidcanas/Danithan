@@ -2,8 +2,8 @@
 
 <h1>Danithan</h1>
 
-[ 🇬🇧 English Readme](https://github.com/CanasDev/Danithan/tree/master/Readmes/README_EN.md)
-[ 🇪🇸 Spanish Readme](https://github.com/CanasDev/Danithan/tree/master/Readmes/REAMDE_ES.md)
+[ 🇬🇧 English Readme](https://github.com/CanasDev/Danithan/blob/master/Readmes/README_EN.md)
+[ 🇪🇸 Spanish Readme](https://github.com/CanasDev/Danithan/blob/master/Readmes/README_ES.md)
 
 </div>
 Src do Danithan - Um bot multifuncional em desenvolvimento ! 
