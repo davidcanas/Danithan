@@ -11,7 +11,18 @@ module.exports = new Schema({
     },
     developers: {
         type: Array
-    }
+    },
+    cmds: {
+        name: {
+          type: String
+        },
+        description: {
+          type: String
+        },
+        category: {
+          type: String
+        }
+      }
 }, { 
     versionKey: false
 });
