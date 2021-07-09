@@ -12,7 +12,9 @@ Recordando que este proyecto tiene la licencia **GNU GENERAL PUBLIC LICENSE V3**
 
 # 😀 Traduzindo 
 Puede ayudarnos traduciendo danithan accediendo a los archivos de traducción respectivos y traduciéndolos
+
 [Traducir al Inglês](https://github.com/CanasDev/Danithan/tree/master/src/lang/en)
+
 [Traducir al Espanhol](https://github.com/CanasDev/Danithan/tree/master/src/lang/es)
 
 # ❓ • Como Puedes Contribuir?
