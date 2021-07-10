@@ -11,7 +11,10 @@ module.exports = new Schema({
         },
         category: {
           type: String
-        }
+        }, 
+      aliases: {
+      type: Array
+      }
       
 }, { 
     versionKey: false
