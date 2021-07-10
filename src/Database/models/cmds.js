@@ -13,7 +13,7 @@ module.exports = new Schema({
           type: String
         }, 
       aliases: {
-      type: String
+      type: Array
       }
       
 }, { 
