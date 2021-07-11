@@ -98,8 +98,7 @@ client.manager.on("trackStart", async(player, track) => {
     .setTitle("💿 Tocando Agora")
     .addField("🎵 Nome da música:", `[${track.title}](${track.uri})`)
     .addField("👤 Pedido por:", track.requester.username)
-  // .addField("⌛ Duração", MsToDate(track.duration))
-  .setColor("RANDOM")
+    .setColor("RANDOM")
       .setFooter("💻 | Sistema de música Danithan")
 const mensagem = await channel.createMessage(embedaa)
 setTimeout(() => {
