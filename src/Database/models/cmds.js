@@ -17,11 +17,6 @@ module.exports = new mongoose.Schema({
           type: Array
         }
 
-        }, 
-      aliases: {
-      type: Array
-      }
-
       
 }, { 
     versionKey: false
