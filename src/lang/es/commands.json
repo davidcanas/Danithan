@@ -1,16 +1,8 @@
 {
 
 
- "ban": {
-   "args": "Uso correcto : d/ban <@user> (motivo)",
-   "conf": "você quer mesmo banir",
-   "msgban": "📍┊ Caso queira uma punição silenciosa reaja com 👌",
-   "footer": "Reacciona con 🛑 para confirmar",
-   "silenceban": "🤫 Yo bani {{UserTag}} silenciosamente quando me pediste"
-   
- },
  "setlang": {
- "args": "Modo de uso e/setlang <lingua>",
+ "args": "Modo de uso d/setlang <pt/es/en>",
 "sucess": "Ahora irei hablar en {{Lang}}"
  },
  "calc": {
@@ -29,5 +21,18 @@
    "number": "Diz um numero válido (NaN)",
    "limit": "Eu só consigo apagar entre 2 a 200 mensagens"
  
+},
+"botinfo": {
+  "title": "<:danithan:826727176845787136> Informaciónes de Danithan",
+  "commandused": "<:terminal:830124045701087252> ",
+  "name": "<:identy:864509103431090217> Nombre",
+  "owner": "<:d_:793559827543752735> Creador",
+  "servers": "<:discord:864509377256095764> Servidores",
+  "node": "<:nodejs:864509809595646003> Versión de node",
+  "commands": "<:pasta:793559362093711440> Comandos",
+  "library": "📚 Biblioteca",
+  "created": "<:relogio:862344276028555264> Créado en",
+  "cpu": "<:cpu:864523602145706024> CPU",
+  "ram": "<:ram1:864523884442550333> RAM"
 }
 }

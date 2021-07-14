@@ -15,7 +15,8 @@
 "vip": "<:ethan_vip:806073004395724811>",
 "segurança": "<:ethan_seguranca:806075316824309762>",
 "parceiro": "<:ethan_parceiro:806073077301379123>",
-"discord": "<:discord:806075507128139777>"
+"discord": "<:discord:806075507128139777>",
+"danithan": "<:danithan:826727176845787136>"
  
  }
  

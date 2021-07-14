@@ -1,17 +1,8 @@
 {
  
 
- "ban": {
-   "args": "Uso correcto : d/ban <@user> (motivo)",
-   "conf": "você quer mesmo banir",
-   "msgban": "📍┊ Caso queira uma punição silenciosa reaja com 👌",
-   "footer": "Reaja com 🛑 para confirmar !",
-   "silenceban": "🤫 Eu bani {{UserTag}} silenciosamente como você pediu",
-   "d4rkoi": "Eu troquei reaga para reaja como você pediu"
-   
- },
  "setlang": {
- "args": "Modo de uso d/setlang <lingua>",
+ "args": "Modo de uso d/setlang <pt/en/es>",
  "sucess": "Linguagem setada para {{Lang}}"
 
  },
@@ -30,6 +21,19 @@
     "args": "Diz um numero de mensagens para eu apagar",
     "number": "Diz um numero válido (NaN)",
     "limit": "Eu só consigo apagar entre 2 a 200 mensagens"
+  },
+  "botinfo": {
+    "title": "<:danithan:826727176845787136> Informações do bot",
+    "commandused": "<:terminal:830124045701087252> Comandos Usados:",
+    "name": "<:identy:864509103431090217> Nome",
+    "owner": "<:d_:793559827543752735> Dono",
+    "servers": "<:discord:864509377256095764> Servidores",
+    "node": "<:nodejs:864509809595646003> Versão do Node",
+    "commands": "<:pasta:793559362093711440> Comandos",
+    "library": "📚 Biblioteca",
+    "created": "<:relogio:862344276028555264> Criado em",
+    "cpu": "<:cpu:864523602145706024> CPU",
+    "ram": "<:ram1:864523884442550333> RAM"
   }
 
 }

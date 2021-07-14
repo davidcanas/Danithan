@@ -1,6 +1,6 @@
-const { Schema } = require('mongoose');
+const mongoose = require('mongoose');
 
-module.exports = new Schema({   
+module.exports = new mongoose.Schema({   
   
         name: {
           type: String,
@@ -11,6 +11,9 @@ module.exports = new Schema({
         },
         category: {
           type: String
+        },
+        aliases: {
+          type: Array
         }
       
 }, { 

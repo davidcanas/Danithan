@@ -1,14 +1,7 @@
 {
  
- "ban": {
-   "args": "Correct use: d/ban @user <reason>",
-   "conf": "really want to ban",
-   "msgban": "📍┊ If you want a silent punishment, react with 👌",
-   "footer": "React with 🛑 to ban the user ",
-   "silenceban": "🤫 I'm banned {{UserTag}} silently as you asked"
- },
  "setlang": {
- "args": "Use: d/setlang <language>",
+ "args": "Use: d/setlang <pt/es/en>",
  "sucess": "Language set to {{Lang}}"
  },
  "calc": {
@@ -27,6 +20,19 @@
    "number": "Please say an valid number",
    "limit": "I can only clear between 2 and 200 messages at a time."
  
+  },
+  "botinfo": {
+    "title": "<:danithan:826727176845787136> Bot Information",
+    "commandused": "<:terminal:830124045701087252> Commands Used:",
+    "name": "<:identy:864509103431090217> Name",
+    "owner": "<:d_:793559827543752735> Owner",
+    "servers": "<:discord:864509377256095764> Guilds",
+    "node": "<:nodejs:864509809595646003> Node version",
+    "commands": "<:pasta:793559362093711440> Commands",
+    "library": "📚 Library",
+    "created": "<:relogio:862344276028555264> Created in",
+    "cpu": "<:cpu:864523602145706024> CPU",
+    "ram": "<:ram1:864523884442550333> RAM"
   }
 
 }

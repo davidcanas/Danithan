@@ -13,8 +13,9 @@ constructor(client) {
 async execute(ctx) {
 let setada;
 let langargs = ctx.args[0]
-if (!langargs) return ctx.msg.channel.createMessage("Insira uma linguagem:\n`en, es, pt`")
- if (langargs !== "pt" && langargs !== "es" && langargs !== "en") return ctx.msg.channel.createMessage("Linguagem Inválida | Lista de linguagens disponíveis:\n`pt, es, en`")
+if (!langargs) return ctx.msg.channel.createMessage(ctx.t("commands:setlang.args"))
+
+ if (langargs !== "pt" && langargs !== "es" && langargs !== "en") return ctx.msg.channel.createMessage(ctx.t("commands:setlang.args"))
  if (langargs === "pt") {
    langargs = "pt"
    setada = "Português"

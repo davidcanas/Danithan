@@ -13,15 +13,11 @@ constructor(client) {
 async execute(ctx) {
 
    ctx.msg.delete()
-          if (!ctx.msg.channel.permissionsOf(ctx.msg.author.id).has('manageMessages')) {
-        ctx.msg.channel.createMessage(ctx.t("commands:clean.permuser"));
-            return;
-        }
+          if (!ctx.msg.channel.permissionsOf(ctx.msg.author.id).has('manageMessages')) return ctx.msg.channel.createMessage(ctx.t("commands:clean.permuser"));
+          
 
-       if (!ctx.msg.channel.permissionsOf(this.client.user.id).has('manageMessages')) {
-           ctx.msg.channel.createMessage(ctx.t("commands:clean.permbot"));
-          return;
-        }
+       if (!ctx.msg.channel.permissionsOf(this.client.user.id).has('manageMessages')) return ctx.msg.channel.createMessage(ctx.t("commands:clean.permbot"));
+
         if (!ctx.args.length)
             return ctx.msg.channel.createMessage(ctx.t("commands:clean.args"));
         
