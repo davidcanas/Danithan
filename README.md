@@ -21,6 +21,7 @@ Você pode nos ajudar traduzindo o Danithan acedendo aos respetivos ficheiros de
 
 [Traduza Para Espanhol](https://github.com/CanasDev/Danithan/tree/master/src/lang/es)
 
+[Traduza para outra língua](https://github.com/)
 # ❓ • Como Contribuir?
 Você pode contribuir ajudando a melhorar o Danithan
 Contrinuindo pode ganhar uma badge exclusiva !
