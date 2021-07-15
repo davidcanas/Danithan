@@ -21,7 +21,11 @@ Você pode nos ajudar traduzindo o Danithan acedendo aos respetivos ficheiros de
 
 [Traduza Para Espanhol](https://github.com/CanasDev/Danithan/tree/master/src/lang/es)
 
-[Traduza para outra língua](https://github.com/)
+Traduza para outra língua:
+[Traduza Comandos](https://github.com/CanasDev/Danithan/tree/master/src/lang/base_commands
+.txt)
+[Traduza Eventos](https://github.com/CanasDev/Danithan/tree/master/src/lang/base_events.txt)
+
 # ❓ • Como Contribuir?
 Você pode contribuir ajudando a melhorar o Danithan
 Contrinuindo pode ganhar uma badge exclusiva !
