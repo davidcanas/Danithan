@@ -9,7 +9,7 @@ This project have **GNU GENERAL PUBLIC LICENSE V3** license.
 
 [See more here](https://github.com/Danithan/DanithanBot/blob/master/LICENSE)  
 
-# 😀 Traduzindo 
+# 😀 Translating
 You can translate danithan editing the json translation files:
 
 [Translate to English](https://github.com/CanasDev/Danithan/tree/master/src/lang/en)
@@ -26,7 +26,7 @@ You can contribute helping danithan
 An exclusive badge for reward
 
 
-# 👍 • Creditos 
+# 👍 • Credits
 [Luís](https://github.com/MrSannyY) - Danithan´s base
 
 [5antos](https://github.com/5antos) - Functions `abbreviateNumber, e getMoreCommonChars`
