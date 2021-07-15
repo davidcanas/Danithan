@@ -10,7 +10,7 @@ module.exports = class LocaleStructure {
 
         i18next.use(backend).init({
             initImmediate: false,
-            ns: ["commands", "events", "default"],
+            ns: ["commands", "events"],
             fallbackLng: 'pt',
             preload: readdirSync("./src/lang/"),
             initImmediate: false,
