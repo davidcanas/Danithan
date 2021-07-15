@@ -1,1 +1,11 @@
 
+{
+  "didYouMean": {
+     "msg": "Não consegui encontrar o comando `{{Cmd}}`\nSerá que quis dizer `{{didYouMean}}`?" 
+  },
+  "mention": {
+   "title": "❓ Precisas de ajuda?",
+   "description": "Olá **{{UserTag}}** o meu prefixo neste servidor é {{Prefix}} usa {{Prefix}}ajuda para mais informações!",
+   "footer": "Reage com ❓ para veres os meus comandos ! "
+}
+  }
