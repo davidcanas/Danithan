@@ -1,3 +1,5 @@
+// to translate to another language replace the text in Portuguese with the text in the language to be translated 
+// IMPORTANT: DO NOT REMOVE ANY VARIABLES / EMOJI
 
 {
   "didYouMean": {
