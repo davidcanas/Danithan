@@ -1,0 +1,41 @@
+// to translate to another language replace the text in Portuguese with the text in the language to be translated 
+// IMPORTANT: DO NOT REMOVE ANY VARIABLES / EMOJI
+{
+ 
+
+ "setlang": {
+ "args": "Modo de uso d/setlang <pt/en/es>",
+ "sucess": "Linguagem setada para {{Lang}}"
+
+ },
+ "calc": {
+   "invalid": "♦️ • Cálculo Invalido",
+   "title": "Calculadora",
+  "field1": "Calculo:",
+  "field2": "Resultado",
+  "footer": "Aprendendo Matemática!" 
+  },
+  "clean": {
+    "permuser": "É necessária a permissão `manageMessages` para executar este comando",
+    "permbot": "Eu não tenho a permissão `manageMessages`",
+    "cleaned1": "Eu apaguei {{msgn}} mensagens\n\nEu não consegui apagar mais devido ao discord",
+    "cleaned2": "Eu apaguei {{msgn}} mensagens",
+    "args": "Diz um numero de mensagens para eu apagar",
+    "number": "Diz um numero válido (NaN)",
+    "limit": "Eu só consigo apagar entre 2 a 200 mensagens"
+  },
+  "botinfo": {
+    "title": "<:danithan:826727176845787136> Informações do bot",
+    "commandused": "<:terminal:830124045701087252> Comandos Usados:",
+    "name": "<:identy:864509103431090217> Nome",
+    "owner": "<:d_:793559827543752735> Dono",
+    "servers": "<:discord:864509377256095764> Servidores",
+    "node": "<:nodejs:864509809595646003> Versão do Node",
+    "commands": "<:pasta:793559362093711440> Comandos",
+    "library": "📚 Biblioteca",
+    "created": "<:relogio:862344276028555264> Criado em",
+    "cpu": "<:cpu:864523602145706024> CPU",
+    "ram": "<:ram1:864523884442550333> RAM"
+  }
+
+}
