@@ -16,6 +16,11 @@ You can translate danithan editing the json translation files:
 
 [Translate to Spanish](https://github.com/CanasDev/Danithan/tree/master/src/lang/es)
 
+**Translate other language:**
+
+[Translate Commands](https://github.com/CanasDev/Danithan/tree/master/src/lang/base_commands.txt)
+[Translate Events](https://github.com/CanasDev/Danithan/tree/master/src/lang/base_events.txt)
+
 # ❓ • How to contribute?
 You can contribute helping danithan
 An exclusive badge for reward
