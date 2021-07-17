@@ -14,17 +14,17 @@ module.exports = class lavalinkCommand extends Command {
         try {
             let lava = this.client.manager.nodes.first()
             let lavabed = new EthanEmbed()
-                .setTitle('Informações do Lavalink')
+                .setTitle(ctx.t("commands:lavalink.title"))
                 .addField(':palm_tree: Node', `${lava.options.identifier}`)
                 .addField(":ping_pong: Ping", `${this.client.lavalinkPings.get(this.client.manager.nodes.first().identifier).ping}ms`)
-                .addField(':cd: Players a tocar', `\`${lava.stats.players}\``)
-                .addField(':clock1: Uptime', `\`${ctx.MsToDate(lava.stats.uptime).dias}D:${ctx.MsToDate(lava.stats.uptime).horas}H:${ctx.MsToDate(lava.stats.uptime).minutos}:M:${ctx.MsToDate(lava.stats.uptime).segundos}S\``)
+                .addField(':cd: Players', `\`${lava.stats.players}\``)
+                .addField(':clock1: Uptime', `\`${ctx.MsToDate(lava.stats.uptime).dias}D:${ctx.MsToDate(lava.stats.uptime).horas}H:${ctx.MsToDate(lava.stats.uptime).minutos}M:${ctx.MsToDate(lava.stats.uptime).segundos}S\``)
                 .setColor("ORANGE")
                 .setFooter("I lava you")
 
             ctx.msg.channel.createMessage(lavabed);
         } catch (LavalinkError) {
-            ctx.msg.channel.createMessage("Ocorreu um erro: " + LavalinkError)
+            ctx.msg.channel.createMessage("Error " + LavalinkError)
         }
 
     }

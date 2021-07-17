@@ -3,7 +3,8 @@
 
  "setlang": {
  "args": "Modo de uso d/setlang <pt/en/es>",
- "sucess": "Linguagem setada para {{Lang}}"
+ "sucess": "Linguagem setada para {{Lang}}",
+ "permuser": "Necessitas da permissão `manageGuild` para usar este comando"
 
  },
  "calc": {
@@ -34,6 +35,38 @@
     "created": "<:relogio:862344276028555264> Criado em",
     "cpu": "<:cpu:864523602145706024> CPU",
     "ram": "<:ram1:864523884442550333> RAM"
-  }
+  },
+  "ping": {
+    "title": "🏓 Ajuda do Comando De Ping",
+    "help": "<:clock2:862344276028555264> `Representa o tempo de resposta em ms`\n<:internet:797178541702774834> `Representa o ping da api do discord`\n<:MongoDB:862343156854423552> `Representa o ping da database (MongoDB)`\n<:lava:862345050667089950> `Representa o ping do lavalink`"
+  },
+  "stop": {
+    "player": "Não posso parar de tocar porque não estou a tocar",
+    "voicechannel": "Não estás no canal de voz",
+    "stopped": "Música parada!"
+  },
+  "play": {
+    "queued": "Adicionei {{track}} á lista",
+    "playlist_title": "💿 A carregar playlist...",
+    "playlist_name": "🎵 Nome da playlist:",
+    "playlist_requester": "👤 Pedido por:",
+    "playlist_footer": "💻 | Sistema de Música do Danithan"
+    },
+    "queue": {
+      "player": "Eu não estou a tocar nada",
+      "voicechannel": "Não estás em um canal de voz",
+      "queue": "Não existem mais musicas na queue",
+      "title": "<a:blob_music:864874919208812544> Lista de Músicas"
+    },
+    "dog": {
+      "title": ":dog: Cão aleatório"
+      },
+       "volume": {
+        "player": "Eu não estou a tocar nada",
+        "voicechannel": "Não estás num canal de voz",
+        "number": "Diz um numero valido",
+        "limit": "Apenas posso setar o volume até 120.",
+        "sucess": "Volume setado para {{vol}}"
+      }
 
 }

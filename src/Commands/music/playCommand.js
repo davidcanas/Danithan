@@ -27,10 +27,10 @@ module.exports = class playCommand extends Command {
       if (res.loadType === "LOAD_FAILED") throw res.exception;
 
     } catch (err) {
-      return ctx.msg.channel.createMessage(`Ups ocorreu um erro (reporte a um dos responsaveis pelo danithan por favor)\n\`${err.message}\``);
+      return ctx.msg.channel.createMessage(`Error \n\`${err.message}\``);
     }
 
-    // Create the player 
+    // Cria o player 
     const player = this.client.manager.create({
       guild: ctx.msg.channel.guild.id,
       voiceChannel: ctx.msg.member.voiceState.channelID,
@@ -50,10 +50,10 @@ module.exports = class playCommand extends Command {
 
       const embed = new EthanEmbed()
         .setColor('RANDOM')
-        .setTitle('💿 A Carregar Playlist...')
-        .addField("🎵 Nome da Playlist:", '`' + playlist?.name + '`')
-        .addField("👤 Pedida por:", ctx.msg.author.username + "#" + ctx.msg.author.discriminator)
-        .setFooter("💻 | Sistema de música Danithan");
+        .setTitle(ctx.t("commands:play.playlist_title"))
+        .addField(ctx.t("commands:play.playlist_name"), '`' + playlist?.name + '`')
+        .addField(ctx.t("commands:play.playlist_requester"), ctx.msg.author.username + "#" + ctx.msg.author.discriminator)
+        .setFooter(ctx.t("commands:play.playlist_footer"));
 
 
 
@@ -66,7 +66,7 @@ module.exports = class playCommand extends Command {
       // Verifica se o bot está tocando caso não esteja ele toca
       if (!player.playing) player.play()
 
-      return ctx.msg.channel.createMessage(`Adicionando ${res.tracks[0].title} á lista `);
+      return ctx.msg.channel.createMessage(ctx.t("commands:play.queued", {track: `${res.tracks[0].title}`}));
     }
   }
 }

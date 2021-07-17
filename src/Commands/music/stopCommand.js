@@ -16,11 +16,11 @@ module.exports = class stopCommand extends Command {
 
     let player = this.client.manager.players.get(ctx.msg.channel.guild.id);
 
-    if (!player) return ctx.msg.channel.createMessage('Não posso parar nada pois não estou a tocar nada');
+    if (!player) return ctx.msg.channel.createMessage(ctx.t("commands:stop.player"));
 
     const vc = ctx.msg.member.voiceState.channelID;
-    if (!vc) return ctx.msg.channel.createMessage("Não estás em um canal de voz")
+    if (!vc) return ctx.msg.channel.createMessage(ctx.t("commands:stop.voicechannel"))
     
     player.destroy();
-    ctx.msg.channel.createMessage("Música parada") 
+    ctx.msg.channel.createMessage(ctx.t("commands:stop.stopped")) 
   }}

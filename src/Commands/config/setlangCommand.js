@@ -11,7 +11,8 @@ constructor(client) {
 }
 
 async execute(ctx) {
-let setada;
+  if (!ctx.msg.channel.permissionsOf(ctx.msg.author.id).has('manageGuild')) return ctx.msg.channel.createMessage(ctx.t("commands:setlang.permuser"));
+  let setada;
 let langargs = ctx.args[0]
 if (!langargs) return ctx.msg.channel.createMessage(ctx.t("commands:setlang.args"))
 

@@ -3,18 +3,19 @@
 
  "setlang": {
  "args": "Modo de uso d/setlang <pt/es/en>",
-"sucess": "Ahora irei hablar en {{Lang}}"
+"sucess": "Ahora irei hablar en {{Lang}}",
+"permuser": "¡Necesita el permiso de `manageGuild` para usar este comando!"
  },
  "calc": {
    "invalid": "♦️ • Cálculo inválido",
-   "title": "Calculator",
-  "field1": "Calc:",
-  "field2": "Result",
-  "footer": "Learning Math !"
+   "title": "Calculadora",
+  "field1": "Calculo:",
+  "field2": "Resultado",
+  "footer": "Estudiando matematica !"
  },
  "clean": {
-  "permuser": "É necessária a permissão `manageMessages` para executar este comando",
-  "permbot": "Eu não tenho a permissão `manageMessages`",
+  "permuser": "¡Necesita el permiso de `manageMessages` para usar este comando!",
+  "permbot": "Yo no tiengo la permission de `manageMessages`",
   "cleaned1": "Eu apaguei {{msgn}} mensagens\n\nEu não consegui apagar mais devido ao discord",
   "cleaned2": "Eu apaguei {{msgn}} mensagens",
   "args": "Diz um numero de mensagens para eu apagar",
@@ -34,5 +35,39 @@
   "created": "<:relogio:862344276028555264> Créado en",
   "cpu": "<:cpu:864523602145706024> CPU",
   "ram": "<:ram1:864523884442550333> RAM"
-}
+},
+"ping": {
+  "title": "🏓 Ayuda del comando ping",
+  "help": "<:clock2:862344276028555264> `Representa el tiempo de respuesta en ms`\n<:internet:797178541702774834> `Representa el Ping de discord api`\n<:MongoDB:862343156854423552> `Representa el ping de la base de datos (MongoDB)`\n<:lava:862345050667089950> `Representa ping de Lavalink`"
+},
+
+"stop": {
+  "player": "No puedo parar nada porque no estoy tocando nada",
+  "voicechannel": "No estás en un canal de voz",
+  "stopped": "Música parada!"
+},
+"play": {
+  "queued": "Agregué {{track}} a la lista",
+  "playlist_title": "💿 Cargando playlist...",
+  "playlist_name": "🎵 Nombre de la playlist",
+  "playlist_requester": "👤 Ordenado por:",
+  "playlist_footer": "💻 | Sistema de música Danithan"
+  },
+  "queue": {
+    "player": "No estoy tocando nada",
+    "voicechannel": "No estás en un canal de voz",
+    "queue": "No hay más nada en la queue.",
+    "title": "<a:blob_music:864874919208812544> Lista de reproducción"
+  },
+  "dog": {
+    "title": ":dog: Perro aleatorio"
+    },
+    "volume": {
+      "player": "I'm not playing anything",
+      "voicechannel": "You aren't in a voiceChannel",
+      "number": "Please say an valid number",
+      "limit": "Max volume exceed (120).",
+      "sucess": "Volume set to {{vol}}"
+    }
+
 }

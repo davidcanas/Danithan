@@ -2,7 +2,8 @@
  
  "setlang": {
  "args": "Use: d/setlang <pt/es/en>",
- "sucess": "Language set to {{Lang}}"
+ "sucess": "Language set to {{Lang}}",
+ "permuser": "You need `manageGuild` permission to use this command !"
  },
  "calc": {
    "invalid": "♦️ • Invalid Calc",
@@ -33,6 +34,43 @@
     "created": "<:relogio:862344276028555264> Created in",
     "cpu": "<:cpu:864523602145706024> CPU",
     "ram": "<:ram1:864523884442550333> RAM"
-  }
+  }, 
+  "ping": {
+    "title": "🏓 Ping Command Help",
+    "help": "<:clock2:862344276028555264> `Represents the reply time in ms`\n<:internet:797178541702774834> `Represents the discord api Ping`\n<:MongoDB:862343156854423552> `Represents the Database Ping (MongoDB)`\n<:lava:862345050667089950> `Represents lavalink ping`"
+  },
+  "lavalink": {
+    "title": "Lavalink Information"
+  },
+  
+    "stop": {
+        "player": "I can't stop anything because I'm not playing anything",
+        "voicechannel": "You aren't in a voiceChannel",
+        "stopped": "Stopped Music !"
+    },
+    "play": {
+    "queued": "Added {{track}} in the queue",
+    "playlist_title": "💿 Loading Playlist...",
+    "playlist_name": "🎵 Playlist Name:",
+    "playlist_requester": "👤 Requested by:",
+    "playlist_footer": "💻 | Danithan Music System"
+    },
+    "queue": {
+      "player": "I'm not playing anything",
+      "voicechannel": "You aren't in a voiceChannel",
+      "queue": "There aren't more songs in the queue",
+      "title": "<a:blob_music:864874919208812544> Music List"
+    },
+    "dog": {
+    "title": ":dog: Random Dog"
+    },
+    "volume": {
+      "player": "I'm not playing anything",
+      "voicechannel": "You aren't in a voiceChannel",
+      "number": "Please say an valid number",
+      "limit": "Max volume exceed (120).",
+      "sucess": "Volume set to {{vol}}"
+    }
+ 
 
 }
