@@ -12,9 +12,10 @@ constructor(client) {
     })
 }
 async execute(ctx) {
- const dog = await fetch("https://random.dog/woof.json").then(res => res.json)
+ const dog = await fetch("https://random.dog/woof.json").then(res => res.json())
 const dogbed = new EthanEmbed()
 .setTitle(ctx.t("commands:dog.title"))
 .setImage(dog.url)
 .setColor("BROWN")
+ctx.msg.channel.createMessage(dogbed)
 }}
