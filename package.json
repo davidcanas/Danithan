@@ -6,22 +6,23 @@
     "start": "node danithan.js"
   },
   "dependencies": {
-    "dotenv": "^8.6.0",
+    "dotenv": "^10.0.0",
     "erela.js": "^2.3.3",
     "eris": "^0.15.1",
     "eris-reactions": "^0.1.4",
-    "ethanutils": "^1.0.4",
+    "ethanutils": "^1.0.7",
+    "events": "^3.3.0",
     "ffmpeg": "^0.0.4",
-    "i18next": "^20.2.1",
-    "i18next-fs-backend": "^1.1.0",
+    "i18next": "^20.3.3",
+    "i18next-fs-backend": "^1.1.1",
     "jimp": "^0.16.1",
-    "mathjs": "^9.3.2",
+    "mathjs": "^9.4.4",
     "moment": "^2.29.1",
-    "mongoose": "^5.12.5",
+    "mongoose": "^5.13.3",
     "node-fetch": "^2.6.1",
     "node-os-utils": "^1.3.5",
     "parse-ms": "^3.0.0",
-    "sift": "^13.5.2",
+    "sift": "^13.5.4",
     "yarn": "^1.22.10"
   }
 }

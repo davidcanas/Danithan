@@ -1,7 +1,7 @@
 const emo = require("../utils/emojis");
 const client = require("../../danithan.js");
-const { EthanEmbed } = require('ethanutils');
-const ReactionHandler = require('eris-reactions');
+const { EthanEmbed, ReactionCollector, MessageCollector } = require('ethanutils');
+//const ReactionHandler = require('eris-reactions');
 
 const i18next = require("i18next");
 const Event = require("../Structures/Event");
@@ -18,6 +18,13 @@ module.exports = class messageCreate extends Event {
   };
 
   async run(msg) {
+    this.client.messageCollectors.forEach(collector => {
+      if (collector.channel.id === message.channel.id) {
+          collector.collect(message);
+      }
+  })
+
+
     try {
       let gRes = await this.client.database.guild.findOne({ guildID: msg.guildID })
 
@@ -44,15 +51,13 @@ module.exports = class messageCreate extends Event {
 
         const msg1 = await msg.channel.createMessage(botembed)
         msg1.addReaction("❓")
-
-        const reactionListener = new ReactionHandler.continuousReactionStream(msg1, (userID) => userID !== msg1.author.id && userID === msg.author.id, false, 
-          { maxMatches: 1, time: 900000 }
-        );
-
-        reactionListener.on('reacted', (event) => {
-          msg.content = `${prefix1}help`
+        const filter = (r, user) => (r.name === '❓') && user === msg.author
+        const collector = new ReactionCollector(this.client, msg1, filter, { time: 120000 })
+        collector.on('collect', async () => {
+  
+        msg.content = `${prefix1}help`
           this.client.emit("messageCreate", msg)
-        });
+        })
       };
       const emoji = emo
 

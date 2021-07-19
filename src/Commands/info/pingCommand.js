@@ -1,6 +1,6 @@
 const Command  = require("../../Structures/Command")
-const { EthanEmbed, Media } = require("ethanutils")
-const ReactionHandler = require('eris-reactions');
+const { EthanEmbed, ReactionCollector } = require("ethanutils")
+
 module.exports = class pingCommand extends Command {
 constructor(client) {
     super(client,  { 
@@ -31,17 +31,14 @@ async execute(ctx) {
   
     mensagemApi.edit({ content: '', embed: pingEmbed.embed})
     mensagemApi.addReaction("help:862349947814019072")
-      const reactionListener = new ReactionHandler.continuousReactionStream(
-            mensagemApi, 
-            (userID) => userID !== mensagemApi.author.id && userID === ctx.msg.author.id, 
-            false, 
-            { maxMatches: 10, time: 900000 }
-        );
     
-        reactionListener.on('reacted', (event) => {
+    const filter = (r, user) => user === ctx.msg.author
+    const collector = new ReactionCollector(this.client, mensagemApi, filter, { time: 120000 })
+
+    collector.on('collect', async (event) => {
          if (event.emoji.id === "862349947814019072") {
             const pingHelpEmbed = new EthanEmbed()
-            .setTitle("🏓 Ajuda do Comando de Ping")
+            .setTitle(ctx.t("commands:ping.title"))
             .setDescription(ctx.t("commands:ping.help"))
             .setFooter(`${ctx.msg.author.username}#${ctx.msg.author.discriminator}`, ctx.msg.author.dynamicAvatarURL())
             .setColor("RED")

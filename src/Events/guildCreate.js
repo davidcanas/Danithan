@@ -1,7 +1,7 @@
 const { EthanEmbed } = require('ethanutils');
 const Event = require("../Structures/Event");
 
-module.exports = class messageCreate extends Event {
+module.exports = class guildCreate extends Event {
     constructor(client) {
         super(client, {
             name: 'guildCreate'
@@ -17,10 +17,10 @@ module.exports = class messageCreate extends Event {
         const embed = new EthanEmbed()
             .setTitle('Entrei num servidor')
             .setColor('RANDOM')
-            .addField('Nome', `\`${guild.name}\``, true)
-            .addField('Dono', `\`${owner.username}#${owner.discriminator}\``, true)
-            .addField('ID do servidor', `\`${guild.id}\``, true )
-            .addField('Membros', `\`${guild.members.size}\``, true)
+            .addField('Nome', `\`${guild.name}\``)
+            .addField('Dono', `\`${owner.username}#${owner.discriminator}\``)
+            .addField('ID do servidor', `\`${guild.id}\``)
+            .addField('Membros', `\`${guild.members.size}\``)
             .setThumbnail(guild.iconURL)
             .setTimestamp()
 
