@@ -27,6 +27,6 @@ Puedes contribuir ayudando a mejorar Danithan
 
 [5antos](https://github.com/5antos) - Funciones `abbreviateNumber, e getMoreCommonChars`
 
-[D4rkb](https://github.com/davidffa) - Funcione `MsToDate`, configuración del [lavalink](https://www.notion.so/Heroku-Lavalink-35a42e309e84419b9958f77bd9e7359f), y otras pequeñas cosas a las que se hace referencia en el código
+[D4rkb](https://github.com/davidffa) - Funcione `MsToDate`, Coletor, configuración del [lavalink](https://www.notion.so/Heroku-Lavalink-35a42e309e84419b9958f77bd9e7359f), y otras pequeñas cosas a las que se hace referencia en el código
 
 _Si lo olvidé de algo, abre un Pull Request_
