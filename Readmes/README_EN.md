@@ -31,7 +31,7 @@ An exclusive badge for reward
 
 [5antos](https://github.com/5antos) - Functions `abbreviateNumber, e getMoreCommonChars`
 
-[D4rkb](https://github.com/davidffa) - Function `MsToDate`, [lavalink](https://www.notion.so/Heroku-Lavalink-35a42e309e84419b9958f77bd9e7359f) configuration, and other small things (in the code is mentioned)
+[D4rkb](https://github.com/davidffa) - Function `MsToDate`, Collector, [lavalink](https://www.notion.so/Heroku-Lavalink-35a42e309e84419b9958f77bd9e7359f) configuration, and other small things (in the code is mentioned)
 
 _If i forget anything open a pull request please_
 (Bad English i know)
