@@ -36,6 +36,6 @@ Contrinuindo pode ganhar uma badge exclusiva !
 
 [5antos](https://github.com/5antos) - Funções `abbreviateNumber, e getMoreCommonChars`
 
-[D4rkb](https://github.com/davidffa) - Função `MsToDate`, configuração do [lavalink](https://www.notion.so/Heroku-Lavalink-35a42e309e84419b9958f77bd9e7359f), e outras pequenas coisas que foram referidas no código
+[D4rkb](https://github.com/davidffa) - Função `MsToDate`, Collector, configuração do [lavalink](https://www.notion.so/Heroku-Lavalink-35a42e309e84419b9958f77bd9e7359f), e outras pequenas coisas que foram referidas no código
 
 _Caso falte referir alguma coisa faça um pull request_
