@@ -70,6 +70,10 @@
       "number": "Please say an valid number",
       "limit": "Max volume exceed (120).",
       "sucess": "Volume set to {{vol}}"
+    },
+    "prefix": {
+      "args": "Say an valid prefix (max 3 characters)",
+      "sucess": "Prefix set to {{prefix}}"
     }
  
 

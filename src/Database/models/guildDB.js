@@ -6,7 +6,8 @@ module.exports = new Schema({
         required: true
     },
     prefix: {
-        type: String
+        type: String,
+        default: "d/"
     },
     roleID: {
         type: String

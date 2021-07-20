@@ -67,6 +67,10 @@
         "number": "Diz um numero valido",
         "limit": "Apenas posso setar o volume até 120.",
         "sucess": "Volume setado para {{vol}}"
+      },
+      "prefix": {
+        "args": "Diga um prefixo valido (máximo 3 caracteres)",
+        "sucess": "Prefixo setado para {{prefix}}"
       }
 
 }

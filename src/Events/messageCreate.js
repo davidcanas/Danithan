@@ -39,7 +39,6 @@ module.exports = class messageCreate extends Event {
       let t = await i18next.getFixedT(language, ["commands", "events", "default"]);
 
       let prefix1 = gRes.prefix
-      if (!prefix1) prefix1 = "d/";
       if (msg.author.bot) return
       if (msg.content.startsWith(`<@${this.client.user.id}>`) || msg.content.startsWith(`<@!${this.client.user.id}>`)) {
         let botembed = new EthanEmbed()
@@ -62,7 +61,7 @@ module.exports = class messageCreate extends Event {
       const emoji = emo
 
       let prefix = gRes.prefix
-      if (!prefix) prefix = "d/"
+
       if (!msg.content.startsWith(prefix)) return;
       let args = msg.content.slice(prefix.length).trim().split(/ +/g);
 
