@@ -19,10 +19,10 @@ module.exports = class messageCreate extends Event {
 
   async run(msg) {
     this.client.messageCollectors.forEach(collector => {
-      if (collector.channel.id === message.channel.id) {
-          collector.collect(message);
+      if (collector.channel.id === msg.channel.id) {
+        collector.collect(message);
       }
-  })
+    })
 
 
     try {
@@ -34,18 +34,18 @@ module.exports = class messageCreate extends Event {
         });
         gRes = await this.client.database.guild.findOne({ guildID: msg.guildID });
       };
-  
+
       let language = gRes.Settings.lang
       let t = await i18next.getFixedT(language, ["commands", "events", "default"]);
 
       let prefix1 = gRes.prefix
       if (!prefix1) prefix1 = "d/";
-
+      if (msg.author.bot) return
       if (msg.content.startsWith(`<@${this.client.user.id}>`) || msg.content.startsWith(`<@!${this.client.user.id}>`)) {
         let botembed = new EthanEmbed()
           .setTitle(t("events:mention.title"))
           .setDescription(`Olá **${msg.author.username}#${msg.author.discriminator}** meu prefixo é ${prefix1} use ${prefix1}help para mais informações!`)
-          .setDescription(t("events:mention.description", {UserTag: `${msg.author.username}#${msg.author.discriminator}`, Prefix: prefix1}))
+          .setDescription(t("events:mention.description", { UserTag: `${msg.author.username}#${msg.author.discriminator}`, Prefix: prefix1 }))
           .setColor("YELLOW")
           .setFooter(t("events:mention.footer"))
 
@@ -54,8 +54,8 @@ module.exports = class messageCreate extends Event {
         const filter = (r, user) => (r.name === '❓') && user === msg.author
         const collector = new ReactionCollector(this.client, msg1, filter, { time: 120000 })
         collector.on('collect', async () => {
-  
-        msg.content = `${prefix1}help`
+
+          msg.content = `${prefix1}help`
           this.client.emit("messageCreate", msg)
         })
       };
@@ -86,13 +86,13 @@ module.exports = class messageCreate extends Event {
 
       if (!command) {
         const emb = new EthanEmbed()
-        .setDescription(t("events:didYouMean.msg", {Cmd: cmd, didYouMean: verificaSemelhanca(cmd, array)}))
-        .setColor("RED")
+          .setDescription(t("events:didYouMean.msg", { Cmd: cmd, didYouMean: verificaSemelhanca(cmd, array) }))
+          .setColor("RED")
 
-       const mensg = await msg.channel.createMessage(emb)
+        const mensg = await msg.channel.createMessage(emb)
         setTimeout(() => {
           mensg.delete()
-        }, 15000);         
+        }, 15000);
       }
 
 
@@ -105,7 +105,7 @@ module.exports = class messageCreate extends Event {
           });
           uRes = await this.client.database.user.findOne({ userID: msg.author.id });
         };
-  
+
         if (!msg.channel.permissionsOf(this.client.user.id).has('sendMessages')) return this.client.users.get(msg.author.id).getDMChannel().then(a => a.createMessage("Lamento mas não tenho permissão de enviar mensagens !"));
         let userVerif = await this.client.database.user.findOne({ userID: msg.author.id });
         if (userVerif.blacklist) {
@@ -128,7 +128,7 @@ module.exports = class messageCreate extends Event {
         const bruh = await this.client.database.bot.findOne({ botID: this.client.user.id });
         ++bruh.commands;
         bruh.save();
-//THank you d4rkb 
+        //THank you d4rkb 
         const commando = new EthanEmbed()
           .setTitle('Log de Comandos')
           .addField("Username", `${msg.author.username}#${msg.author.discriminator}`)

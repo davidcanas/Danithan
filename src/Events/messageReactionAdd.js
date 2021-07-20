@@ -18,7 +18,7 @@ module.exports = class messageReactionAdd extends Event {
               const user = this.client.users.get(reactor.id);
               console.log(user)
             
-              if (user.user) {
+              if (user) {
                console.log("emiti message colect")
                 collector.collect(reaction, user);
               }

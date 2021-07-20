@@ -36,7 +36,8 @@ async execute(ctx) {
     const collector = new ReactionCollector(this.client, mensagemApi, filter, { time: 120000 })
 
     collector.on('collect', async (event) => {
-         if (event.emoji.id === "862349947814019072") {
+      console.log("eu coletei")  
+      if (event.id === "862349947814019072") {
             const pingHelpEmbed = new EthanEmbed()
             .setTitle(ctx.t("commands:ping.title"))
             .setDescription(ctx.t("commands:ping.help"))
@@ -47,7 +48,7 @@ async execute(ctx) {
             mensagemApi.addReaction("◀️")
 
          }  
-         if (event.emoji.name === "◀️") {
+         if (event.name === "◀️") {
             mensagemApi.edit({content: "", embed: pingEmbed.embed})
             mensagemApi.removeReaction("◀️")
             mensagemApi.addReaction("help:862349947814019072")
