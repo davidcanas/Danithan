@@ -4,6 +4,7 @@ const { EthanEmbed } = require("ethanutils")
 require("./src/Structures/DaniError");
 const { Manager } = require('erela.js');
 
+const i18next = require("i18next");
 const client = new Danithan("Bot " + process.env.BOT_TOKEN, {
   allowedMentions: {
     everyone: false
