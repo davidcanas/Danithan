@@ -1,6 +1,6 @@
 const { EthanEmbed, removeDupeChars } = require("ethanutils")
 const Eris = require("eris")
-const ReactionHandler = require('eris-reactions');
+//const ReactionHandler = require('eris-reactions');
 //const sourcebin = require('sourcebin');
 //const firebase = require("firebase")
 const ExecutorStupidError = require("../../Structures/DaniError")
