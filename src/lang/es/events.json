@@ -6,5 +6,11 @@
    "title": "❓ [Tradução espanhola incompleta]",
    "description": "Hello **{{UserTag}}** my prefix is {{Prefix}} use {{Prefix}}ayuda for more information!",
    "footer": "React with ❓ for see all my commands ! "
+},
+"trackStart": {
+   "title": "💿 Tocando Ahora",
+   "music": "🎵 Nombre de la música:",
+   "requester": "👤 Ordenado por:",
+   "footer": "💻 | Sistema de música Danithan"
 }
 }

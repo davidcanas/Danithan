@@ -93,14 +93,20 @@ client.on('error', async (err) => {
   console.error("[Erro Recebido da index.js]: " + err);
 });
 client.manager.on("trackStart", async (player, track) => {
+  let gRes = await client.database.guild.findOne({ guildID: player.guild })
+
+
+let language = gRes.Settings.lang
+let t = await i18next.getFixedT(language, ["commands", "events"]);
+
   const channel = client.getChannel(player.textChannel);
   // Send a message when the track starts playing with the track name and the requester's Discord tag, e.g. username#discriminator
   const embedaa = new EthanEmbed()
-    .setTitle("💿 Tocando Agora")
-    .addField("🎵 Nome da música:", `[${track.title}](${track.uri})`)
-    .addField("👤 Pedido por:", track.requester.username)
+    .setTitle(t("events:trackStart.title"))
+    .addField(t("events:trackStart.music"), `[${track.title}](${track.uri})`)
+    .addField(t("events:trackStart.requester"), track.requester.username)
     .setColor("RANDOM")
-    .setFooter("💻 | Sistema de música Danithan")
+    .setFooter(t("events:trackStart.footer"))
   const mensagem = await channel.createMessage(embedaa)
   setTimeout(() => {
     const verif = client.getChannel(player.textChannel).messages.get(mensagem.id)

@@ -36,7 +36,7 @@ module.exports = class messageCreate extends Event {
       };
 
       let language = gRes.Settings.lang
-      let t = await i18next.getFixedT(language, ["commands", "events", "default"]);
+      let t = await i18next.getFixedT(language, ["commands", "events"]);
 
       let prefix1 = gRes.prefix
       if (msg.author.bot) return

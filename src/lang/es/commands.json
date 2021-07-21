@@ -40,6 +40,9 @@
   "title": "🏓 Ayuda del comando ping",
   "help": "<:clock2:862344276028555264> `Representa el tiempo de respuesta en ms`\n<:internet:797178541702774834> `Representa el Ping de discord api`\n<:MongoDB:862343156854423552> `Representa el ping de la base de datos (MongoDB)`\n<:lava:862345050667089950> `Representa ping de Lavalink`"
 },
+"lavalink": {
+  "title": "Informaciones de lavalink"
+},
 
 "stop": {
   "player": "No puedo parar nada porque no estoy tocando nada",

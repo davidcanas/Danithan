@@ -421,11 +421,6 @@ erela.js@^2.3.3:
     petitio "^1.1.0"
     ws "^7.3.1"
 
-eris-reactions@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/eris-reactions/-/eris-reactions-0.1.4.tgz#4b642f7411144f164b6097138c262eac6b03def1"
-  integrity sha512-U2rMtfywnhh4TmqFcF7uo/ciyQN8vb9ptwSJMQs/uaY1a401f+t3sei1R3IR2gYqaFejJzgjTmzBMT6jIBPYYQ==
-
 eris@^0.15.1:
   version "0.15.1"
   resolved "https://registry.yarnpkg.com/eris/-/eris-0.15.1.tgz#6b44e6d4675c271def7484725a0edede9e798960"
@@ -441,10 +436,10 @@ escape-latex@^1.2.0:
   resolved "https://registry.yarnpkg.com/escape-latex/-/escape-latex-1.2.0.tgz#07c03818cf7dac250cce517f4fda1b001ef2bca1"
   integrity sha512-nV5aVWW1K0wEiUIEdZ4erkGGH8mDxGyxSeqPzRNtWP7ataw+/olFObw7hujFWlVjNsaDFw5VZ5NzVSIqRgfTiw==
 
-ethanutils@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/ethanutils/-/ethanutils-1.0.7.tgz#9026069468360b4b509b267b0a125fada758721b"
-  integrity sha512-Ln9PpxA8m+4MIaPMcu9bRn4kAuWBcCSl5o6+Pnb5zVXGhjamZWMCinX4+NfAbliBbnEeqotiDgxx60RajU3mTg==
+ethanutils@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/ethanutils/-/ethanutils-1.0.8.tgz#3330ba6694b89e7ced44ee5b38cdb4db6513a5b1"
+  integrity sha512-zZD5rpQ2kWGb5fK6HESpKPnPqzPFBi1CqAEcq3TgdU2SgJk2up6P8MZSCd4NXkpbIpSrTLXqrentJMfqWBfi9A==
 
 events@^3.3.0:
   version "3.3.0"
