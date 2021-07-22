@@ -23,7 +23,12 @@ module.exports = new Schema({
     type: String,
     default: undefined
   },
-   
+  economia: {
+    dinheiro: {
+   type: Number,
+   default: 0
+    },
+  }
   
 }, {
   versionKey: false
