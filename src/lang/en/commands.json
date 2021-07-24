@@ -74,6 +74,11 @@
     "prefix": {
       "args": "Say an valid prefix (max 3 characters)",
       "sucess": "Prefix set to {{prefix}}"
+    },
+    "atm": {
+      "db": "{{member}} isnt in my database",
+      "title": "<:danithan:826727176845787136> Danis of {{member}}",
+      "desc": "{{tag}} have {{danis}}"
     }
  
 

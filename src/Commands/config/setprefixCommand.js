@@ -18,7 +18,9 @@ module.exports = class setPrefixCommand extends Command {
         if (args.length > 3) {
             return ctx.msg.channel.createMessage(ctx.t("commands:prefix.args"))
         }
-        this.client.database.guild.findOneAndUpdate({ guildID: ctx.msg.guildID, prefix: args })
+       await this.client.database.guild.findOneAndUpdate({ guildID: ctx.msg.guildID},{ 
+           prefix: args 
+        })
         ctx.msg.channel.createMessage(ctx.t("commands:prefix.sucess", {prefix: args}))
     }
 }

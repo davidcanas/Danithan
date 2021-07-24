@@ -71,7 +71,17 @@
         "number": "Diz um numero valido",
         "limit": "Apenas posso setar o volume até 120.",
         "sucess": "Volume setado para {{vol}}"
+      },
+       "prefix": {
+        "args": "Diga um prefixo valido (máximo 3 caracteres)",
+        "sucess": "Prefixo setado para {{prefix}}"
+      },
+      "atm": {
+        "db": "{{member}} não está na minha base de dados",
+        "title": "<:danithan:826727176845787136> Danis de {{member}}",
+        "desc": "{{tag}} têm {{dani}}"
       }
+   
 
 
 }

@@ -30,8 +30,7 @@ if (!langargs) return ctx.msg.channel.createMessage(ctx.t("commands:setlang.args
    setada = "English"
  }
  
- this.client.database.guild.findOneAndUpdate({
-   guildID: ctx.msg.channel.guild.id,
+ this.client.database.guild.findOneAndUpdate({guildID: ctx.msg.channel.guild.id}, {
   Settings: {
    lang: `${langargs}`
   } 

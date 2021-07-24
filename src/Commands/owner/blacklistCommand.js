@@ -26,8 +26,7 @@ async execute(ctx) {
    let userDC = this.client.users.get(user) || await this.client.getRESTUser(user);
 if (userDC.id === "791347446298312724") return ctx.msg.channel.createMessage("Nem vou coemntar...")
   console.log(userDC)
-   this.client.database.user.findOneAndUpdate({
-      userID: userDC.id,
+   this.client.database.user.findOneAndUpdate({userID: userDC.id},{
       blacklist: true,
       motivo: motivo,
       horaBlacklist: `${moment().format("L")} ás ${moment().format("LT")}` 
@@ -45,8 +44,7 @@ if (tipo === "remove") {
    
     let userDC = this.client.users.get(user) || await this.client.getRESTUser(user);
     let userTag = userDC.username + "#" + userDC.discriminator + " (" + userDC.id + ")"
-    this.client.database.user.findOneAndUpdate({
-        userID: userDC.id,
+    this.client.database.user.findOneAndUpdate({userID: userDC.id},{
         blacklist: false,
         motivo: undefined,
         horaBlacklist: undefined
