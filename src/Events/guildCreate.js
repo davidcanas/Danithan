@@ -11,7 +11,9 @@ module.exports = class guildCreate extends Event {
     async run(guild) {
         await this.client.database.guild.create({
             guildID: guild.id,
-            prefix: "d/" 
+            Settings: {
+            prefix: "d/"
+            } 
         });  
         const owner = this.client.users.get(guild.ownerID)
         const embed = new EthanEmbed()

@@ -31,6 +31,9 @@ module.exports = class messageCreate extends Event {
       if (!gRes) {
         await this.client.database.guild.create({
           guildID: msg.guildID,
+          Settings: {
+            prefix: "d/"
+          }
         });
         gRes = await this.client.database.guild.findOne({ guildID: msg.guildID });
       };
@@ -38,7 +41,9 @@ module.exports = class messageCreate extends Event {
       let language = gRes.Settings.lang
       let t = await i18next.getFixedT(language, ["commands", "events"]);
 
-      let prefix1 = gRes.prefix
+      let prefix1 = gRes.Settings.prefix
+
+      if (!prefix1) prefix1 = "d/"
       if (msg.author.bot) return
       if (msg.content.startsWith(`<@${this.client.user.id}>`) || msg.content.startsWith(`<@!${this.client.user.id}>`)) {
         let botembed = new EthanEmbed()
@@ -60,7 +65,7 @@ module.exports = class messageCreate extends Event {
       };
       const emoji = emo
 
-      let prefix = gRes.prefix
+      let prefix = gRes.Settings.prefix
 
       if (!msg.content.startsWith(prefix)) return;
       let args = msg.content.slice(prefix.length).trim().split(/ +/g);

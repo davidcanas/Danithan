@@ -5,10 +5,7 @@ module.exports = new Schema({
         type: String,
         required: true
     },
-    prefix: {
-        type: String,
-        default: "d/"
-    },
+    
     roleID: {
         type: String
     },
@@ -28,6 +25,10 @@ module.exports = new Schema({
         lang: {
             type: String,
             default: "pt"
+        },
+        prefix: {
+            type: String,
+            default: "d/"
         },
         gay: {
             type: Boolean,
