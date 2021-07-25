@@ -46,6 +46,15 @@ const nodes = [
     retryAmount: 30,
     retryDelay: 3000,
     secure: false
+  },
+  {
+    identifier: 'Danithan Maldivas Node',
+    host: 'lavalink-danithan1.herokuapp.com',
+    port: 80,
+    password: process.env.LAVALINK_PASS,
+    retryAmount: 30,
+    retryDelay: 3000,
+    secure: false
   }
 ];
 
