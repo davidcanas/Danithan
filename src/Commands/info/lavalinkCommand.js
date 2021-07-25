@@ -12,11 +12,11 @@ module.exports = class lavalinkCommand extends Command {
     }
     async execute(ctx) {
         try {
-            let lava = this.client.manager.nodes.first()
+            let lava = this.client.manager.nodes.filter(a => a.stats.uptime !== 0).first()
             let lavabed = new EthanEmbed()
                 .setTitle(ctx.t("commands:lavalink.title"))
                 .addField(':palm_tree: Node', `${lava.options.identifier}`)
-                .addField(":ping_pong: Ping", `${this.client.lavalinkPings.get(this.client.manager.nodes.first().identifier).ping}ms`)
+                .addField(":ping_pong: Ping", `${this.client.lavalinkPings.get(lava.options.identifier).ping}ms`)
                 .addField(':cd: Players', `\`${lava.stats.players}\``)
                 .addField(':clock1: Uptime', `\`${ctx.MsToDate(lava.stats.uptime).dias}D:${ctx.MsToDate(lava.stats.uptime).horas}H:${ctx.MsToDate(lava.stats.uptime).minutos}M:${ctx.MsToDate(lava.stats.uptime).segundos}S\``)
                 .setColor("ORANGE")
