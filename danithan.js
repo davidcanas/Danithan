@@ -73,13 +73,14 @@ client.once('ready', () => {
 client.lavalinkPings = new Map();
 
 client.manager.on('nodeConnect', (node) => {
-  client.lavalinkPings.set(node.identifier, {});
+ 
+ client.lavalinkPings.set(node.options.identifier, {});
 console.log(node)
   const sendPing = () => {
     node.send({
       op: 'ping'
     });
-    client.lavalinkPings.get(node.identifier).lastPingSent = Date.now();
+    client.lavalinkPings.get(node.options.identifier).lastPingSent = Date.now();
   };
 
   sendPing();
@@ -90,7 +91,7 @@ console.log(node)
 
 client.manager.on('nodeError', (node, error) => {
   if (error && error.message.includes('"pong"')) {
-    const lavalinkPing = client.lavalinkPings.get(node.identifier);
+    const lavalinkPing = client.lavalinkPings.get(node.options.identifier);
     lavalinkPing.ping = Date.now() - lavalinkPing.lastPingSent;
     return;
   }
