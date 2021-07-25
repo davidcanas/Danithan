@@ -74,7 +74,7 @@ client.lavalinkPings = new Map();
 
 client.manager.on('nodeConnect', (node) => {
   client.lavalinkPings.set(node.identifier, {});
-
+console.log(node)
   const sendPing = () => {
     node.send({
       op: 'ping'
@@ -146,4 +146,4 @@ client.on("rawWS", async (packet) => {
   };
 });
 
-// up (Sushi)
+// up (cu)
