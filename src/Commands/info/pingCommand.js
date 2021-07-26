@@ -22,10 +22,10 @@ async execute(ctx) {
         const stop2 = process.hrtime(start1);
 
         const pingApi = Math.round(((stop2[0] * 1e9) + stop2[1]) / 1e6);
-  
+  const lava = this.client.manager.nodes.filter(a => a.stats.uptime !== 0).first()
     const pingEmbed = new EthanEmbed()
     .setTitle("🏓 Pong")
-    .setDescription(`<:clock2:862344276028555264> \`${pingApi}ms\`\n<:internet:797178541702774834> \`${this.client.shards.get(0).latency}ms\`\n<:MongoDB:862343156854423552> \`${pingDB}ms\`\n<:lava:862345050667089950> \`${this.client.lavalinkPings.get(this.client.manager.nodes.first().identifier).ping}ms\``)
+    .setDescription(`<:clock2:862344276028555264> \`${pingApi}ms\`\n<:internet:797178541702774834> \`${this.client.shards.get(0).latency}ms\`\n<:MongoDB:862343156854423552> \`${pingDB}ms\`\n<:lava:862345050667089950> \`${this.client.lavalinkPings.get(lava.options.identifier).ping}ms\``)
     .setFooter(`${ctx.msg.author.username}#${ctx.msg.author.discriminator}`, ctx.msg.author.dynamicAvatarURL())
     .setColor("RED")
   
