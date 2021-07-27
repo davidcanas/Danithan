@@ -1,6 +1,6 @@
 
 const { EthanEmbed } = require("ethanutils")
-
+const os = require("os")
 const Command  = require("../../Structures/Command")
 const cpu1 = require('node-os-utils');
 module.exports = class botinfoCommand extends Command {
@@ -18,7 +18,7 @@ async execute(ctx) {
    let cmd = this.client.commands.size
    let serv = this.client.guilds.size
   let nome = `${this.client.user.username}#${this.client.user.discriminator}`
-
+   let total = os.totalMem() / 1024 / 1024
  const cmdCount = await this.client.database.bot.findOne({ botID: this.client.user.id });
         
  const botinfo = new EthanEmbed()
@@ -32,7 +32,7 @@ async execute(ctx) {
     .addField(ctx.t("commands:botinfo.commands"), `**${cmd}**`)
  .addField(ctx.t("commands:botinfo.created"), "**24/12/20**")
   .addField(ctx.t("commands:botinfo.cpu"), `**${cpuValor}%**`)
-.addField(ctx.t("commands:botinfo.ram"), `**${(process.memoryUsage().rss / 1024 / 1024).toFixed(0)}MB**`)
+.addField(ctx.t("commands:botinfo.ram"), `**${(process.memoryUsage().rss / 1024 / 1024).toFixed(0)}MB/${total}MB**`)
  .setColor("BLUE")
  .setFooter(`Danithan`, this.client.user.dynamicAvatarURL())
  .setThumbnail(this.client.user.dynamicAvatarURL())
