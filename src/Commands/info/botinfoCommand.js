@@ -18,7 +18,7 @@ async execute(ctx) {
    let cmd = this.client.commands.size
    let serv = this.client.guilds.size
   let nome = `${this.client.user.username}#${this.client.user.discriminator}`
-   let total = os.totalMem() / 1024 / 1024
+   let total = os.totalmem() / 1024 / 1024
  const cmdCount = await this.client.database.bot.findOne({ botID: this.client.user.id });
         
  const botinfo = new EthanEmbed()
