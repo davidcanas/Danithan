@@ -73,28 +73,12 @@ client.once('ready', () => {
 client.lavalinkPings = new Map();
 
 client.manager.on('nodeConnect', (node) => {
+  console.log(`[Lavalink]: Conectei o node ${node.options.identifier}.`);
  
- client.lavalinkPings.set(node.options.identifier, {});
-console.log(node)
-  const sendPing = () => {
-    node.send({
-      op: 'ping'
-    });
-    client.lavalinkPings.get(node.options.identifier).lastPingSent = Date.now();
-  };
-
-  sendPing();
-  setInterval(() => {
-    sendPing();
-  }, 45000);
 });
 
 client.manager.on('nodeError', (node, error) => {
-  if (error && error.message.includes('"pong"')) {
-    const lavalinkPing = client.lavalinkPings.get(node.options.identifier);
-    lavalinkPing.ping = Date.now() - lavalinkPing.lastPingSent;
-    return;
-  }
+  
   console.log(`[Lavalink]: Ocorreu um erro no node ${node.identifier}.\nErro: ${error.message}`);
 });
 
