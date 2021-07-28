@@ -9,6 +9,7 @@ const client = new Danithan("Bot " + process.env.BOT_TOKEN, {
   allowedMentions: {
     everyone: false
   },
+  maxShards: 2,
   intents: 32767,
   restMode: true,
   defaultImageFormat: 'png',
