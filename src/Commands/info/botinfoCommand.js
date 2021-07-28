@@ -34,7 +34,7 @@ async execute(ctx) {
   .addField(ctx.t("commands:botinfo.cpu"), `**${cpuValor}%**`)
 .addField(ctx.t("commands:botinfo.ram"), `**${(process.memoryUsage().rss / 1024 / 1024).toFixed(0)}MB/${total}MB**`)
  .setColor("BLUE")
- .setFooter(`Danithan`, this.client.user.dynamicAvatarURL())
+ .setFooter(`Shard ${ctx.msg.channel.guild.shard}/1`, this.client.user.dynamicAvatarURL())
  .setThumbnail(this.client.user.dynamicAvatarURL())
  ctx.msg.channel.createMessage(botinfo)
 }
