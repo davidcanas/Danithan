@@ -74,19 +74,17 @@ client.once('ready', () => {
 client.lavalinkPings = new Map();
 
 client.manager.on('nodeConnect', (node) => {
-  console.log(`[Lavalink]: Conectei o node ${node.options.identifier}.`);
+  console.log(`\x1b[36m[Lavalink]: Conectei o node ${node.options.identifier}.\x1b[0m`);
  
 });
 
 client.manager.on('nodeError', (node, error) => {
-  
-  console.log(`[Lavalink]: Ocorreu um erro no node ${node.identifier}.\nErro: ${error.message}`);
+  if (error.message.includes("503")) return 
+  console.log(`\u001b[31m[Lavalink]: Ocorreu um erro no node ${node.identifier}.\nErro: ${error.message}\u001b[33m`);
 });
 
-//Para usar o valor do ping do lavalink num comando por exemplo é so usar
-//client.lavalinkPings.get(client.manager.nodes.first().identifier).ping
 client.on('error', async (err) => {
-  console.error("[Erro Recebido da index.js]: " + err);
+  console.error("\u001b[31m[Erro]: " + err + "\u001b[33m");
 });
 client.manager.on("trackStart", async (player, track) => {
   let gRes = await client.database.guild.findOne({ guildID: player.guild })

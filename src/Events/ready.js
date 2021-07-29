@@ -8,20 +8,33 @@ module.exports = class ready extends Event {
     };
 
     async run(client) {
-	    let activities = [
-			`Utilize d/help para obter ajuda`,
-			`Estou em ${this.client.guilds.size} servidores!`,
-			` Versão 1.2 | Grande atualização em breve`,
-			`😃 Já Conheço ${this.client.users.size} usuários !`,
-		     `🏳️‍🌈 | #OrgulhoLGBTQIA+ | #MêsDoOrgulhoLGBTQIA+ `
+	    let activities0 = [
+			`Utilize d/help para obter ajuda | Shard 0/1 `,
+			`Estou em ${this.client.guilds.size} servidores!| Shard 0/1 `,
+			` Versão 1.2 | Grande atualização em breve | Shard 0/1`,
+			`😃 Já Conheço ${this.client.users.size} usuários ! | Shard 0/1`,
+		     ``
+		]
+        let activities1 = [
+			`Utilize d/help para obter ajuda | Shard 1/1`,
+			`Estou em ${this.client.guilds.size} servidores! | Shard 1/1`,
+			`Estou em ${this.client.guilds.size} servidores! `,
+			` Versão 1.2.1 | Grande atualização em breve | Shard 1/1`,
+			`😃 Já Conheço ${this.client.users.size} usuários ! | Shard 1/1`,
+		     ``
 		],
 		i = 0;
         setInterval(async () => {
-		    this.client.editStatus('online', {
-                name: `${activities[i++ % activities.length]}`,
+		    this.client.shards.get(0).editStatus('online', {
+                name: `${activities0[i++ % activities0.length]}`,
+                type: 0
+            });
+            this.client.shards.get(1).editStatus('online', {
+                name: `${activities0[i++ % activities0.length]}`,
                 type: 0
             });
         }, 15000);
-        console.log(`\x1b[36m[${new Date().toUTCString()}] Bot Online \x1b[0m`);   
+
+        console.log(`\u001b[32m[${new Date().toUTCString()}] Bot Online \u001b[39m`);   
     };
 };
