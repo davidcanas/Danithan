@@ -18,7 +18,7 @@ module.exports = class lavalinkCommand extends Command {
                 .addField(':palm_tree: Node', `${lava.options.identifier}`)
                 .addField(":ping_pong: Ping", `${this.client.lavalinkPings.get(lava.options.identifier).ping}ms`)
                 .addField(':cd: Players', `\`${lava.stats.players}\``)
-                .addField(':clock1: Uptime', `\`${ctx.MsToDate(lava.stats.uptime).dias}D:${ctx.MsToDate(lava.stats.uptime).horas}H:${ctx.MsToDate(lava.stats.uptime).minutos}M:${ctx.MsToDate(lava.stats.uptime).segundos}S\``)
+                .addField(':clock1: Uptime', `\`InfinityD\``)
                 .setColor("ORANGE")
                 .setFooter("I lava you")
 
