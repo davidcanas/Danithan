@@ -39,11 +39,11 @@ module.exports = class playCommand extends Command {
     //Aqui verificamos se é uma playlist e se é carregamos a mesma
     if (res.loadType === 'PLAYLIST_LOADED') {
       const playlist = res.playlist;
-
+      player.connect()
       for (let poh of res.tracks)
         player.queue.add(poh);
       /* ^ Thank you D4rkB ^ */
-      
+
       // Verifica se o bot está tocando caso não esteja ele toca
       if (!player.playing)
         player.play();
@@ -66,7 +66,7 @@ module.exports = class playCommand extends Command {
       // Verifica se o bot está tocando caso não esteja ele toca
       if (!player.playing) player.play()
 
-      return ctx.msg.channel.createMessage(ctx.t("commands:play.queued", {track: `${res.tracks[0].title}`}));
+      return ctx.msg.channel.createMessage(ctx.t("commands:play.queued", { track: `${res.tracks[0].title}` }));
     }
   }
 }

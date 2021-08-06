@@ -112,6 +112,7 @@ client.manager.on('trackError', (player, track, message) => {
 })
 client.on("rawWS", async (packet) => {
   client.manager.updateVoiceState(packet)
+  
   if (packet.t === "INTERACTION_CREATE" && packet.d.type === 3) {
     console.log("Id da guild" + packet.d.guild_id);
     console.log("Channel" + packet.d.channel_id);

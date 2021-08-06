@@ -41,7 +41,8 @@
     "help": "<:clock2:862344276028555264> `Representa o tempo de resposta em ms`\n<:internet:797178541702774834> `Representa o ping da api do discord`\n<:MongoDB:862343156854423552> `Representa o ping da database (MongoDB)`\n<:lava:862345050667089950> `Representa o ping do lavalink`"
   },
   "lavalink": {
-    "title": "Informações do lavalink"
+    "title": "Informações do lavalink",
+    "system": "Sistema"
   },
   "stop": {
     "player": "Não posso parar de tocar porque não estou a tocar",

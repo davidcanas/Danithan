@@ -48,7 +48,6 @@ module.exports = class messageCreate extends Event {
       if (msg.content.startsWith(`<@${this.client.user.id}>`) || msg.content.startsWith(`<@!${this.client.user.id}>`)) {
         let botembed = new EthanEmbed()
           .setTitle(t("events:mention.title"))
-          .setDescription(`Olá **${msg.author.username}#${msg.author.discriminator}** meu prefixo é ${prefix1} use ${prefix1}help para mais informações!`)
           .setDescription(t("events:mention.description", { UserTag: `${msg.author.username}#${msg.author.discriminator}`, Prefix: prefix1 }))
           .setColor("YELLOW")
           .setFooter(t("events:mention.footer"))

@@ -12,7 +12,16 @@ constructor(client) {
     })
 }
 async execute(ctx) {
-     const start = process.hrtime();
+   const fetch = require('node-fetch');
+   let lava = this.client.manager.nodes.filter(a => a.stats.uptime !== 0).first()
+const startLL = process.hrtime();
+await fetch(`http://${lava.options.host}/version`, {
+  headers: { Authorization: process.env.LAVALINK_PASS }
+});
+const stopLL = process.hrtime(startLL);
+
+const lavalinkPing = Math.round(((stopLL[0] * 1e9) + stopLL[1]) / 1e6); //  
+   const start = process.hrtime();
         await this.client.database.guild.findOne({guildID: ctx.msg.guildID});
         const stop = process.hrtime(start);
 
@@ -22,10 +31,10 @@ async execute(ctx) {
         const stop2 = process.hrtime(start1);
 
         const pingApi = Math.round(((stop2[0] * 1e9) + stop2[1]) / 1e6);
-  const lava = this.client.manager.nodes.filter(a => a.stats.uptime !== 0).first()
+
     const pingEmbed = new EthanEmbed()
     .setTitle("🏓 Pong")
-    .setDescription(`<:clock2:862344276028555264> \`${pingApi}ms\`\n<:internet:797178541702774834> \`${this.client.shards.get(ctx.msg.channel.guild.shard.id).latency}ms\`\n<:MongoDB:862343156854423552> \`${pingDB}ms\`\n<:lava:862345050667089950> \`Infinity ms\``)
+    .setDescription(`<:clock2:862344276028555264> \`${pingApi}ms\`\n<:internet:797178541702774834> \`${this.client.shards.get(ctx.msg.channel.guild.shard.id).latency}ms\`\n<:MongoDB:862343156854423552> \`${pingDB}ms\`\n<:lava:862345050667089950> \`${lavalinkPing}ms\``)
     .setFooter(`${ctx.msg.author.username}#${ctx.msg.author.discriminator}`, ctx.msg.author.dynamicAvatarURL())
     .setColor("RED")
   

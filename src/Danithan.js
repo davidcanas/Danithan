@@ -15,7 +15,6 @@ module.exports = class DaniClient extends Client {
         this.commands = new Collection();
         this.aliases = new Collection();
         this.cooldowns = new Collection();
-        this.botInvite = "https://discord.com/oauth2/authorize?client_id=793063574834118696&scope=bot&permissions=805315640";
     };
 
     startLoaders() {
