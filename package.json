@@ -8,7 +8,7 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "erela.js": "^2.3.3",
-    "eris": "git+https://github.com/DonovanDMC/eris.git#merge",
+    "eris": "^0.15.1",
     "ethanutils": "^1.0.8",
     "events": "^3.3.0",
     "ffmpeg": "^0.0.4",

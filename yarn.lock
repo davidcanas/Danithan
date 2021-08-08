@@ -421,11 +421,12 @@ erela.js@^2.3.3:
     petitio "^1.1.0"
     ws "^7.3.1"
 
-"eris@git+https://github.com/DonovanDMC/eris.git#merge":
-  version "0.15.2-dev"
-  resolved "git+https://github.com/DonovanDMC/eris.git#69a0b101f3067614b53f82a8f6f387723e4c1136"
+eris@^0.15.1:
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/eris/-/eris-0.15.1.tgz#6b44e6d4675c271def7484725a0edede9e798960"
+  integrity sha512-IQ3BPW6OjgFoqjdh+irPOa1jFlkotk+WNu2GQQ7QAQfbzQEPZgn+F+hpOxfMUXPHOZMX4sPKLkVDkMHAssBYhw==
   dependencies:
-    ws "^7.4.6"
+    ws "^7.2.1"
   optionalDependencies:
     opusscript "^0.0.8"
     tweetnacl "^1.0.1"
@@ -883,7 +884,7 @@ util-deprecate@~1.0.1:
   resolved "https://registry.yarnpkg.com/when/-/when-3.7.8.tgz#c7130b6a7ea04693e842cdc9e7a1f2aa39a39f82"
   integrity sha1-xxMLan6gRpPoQs3J56Hyqjmjn4I=
 
-ws@^7.3.1, ws@^7.4.6:
+ws@^7.2.1, ws@^7.3.1:
   version "7.5.3"
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.3.tgz#160835b63c7d97bfab418fc1b8a9fced2ac01a74"
   integrity sha512-kQ/dHIzuLrS6Je9+uv81ueZomEwH0qVYstcAQ4/Z93K8zeko9gtAbttJWzoC5ukqXY1PpoouV3+VSOqEAFt5wg==
