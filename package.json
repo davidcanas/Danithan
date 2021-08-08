@@ -5,6 +5,10 @@
   "scripts": {
     "start": "node danithan.js"
   },
+  "engines": {
+    "node": "14.17.3",
+    "yarn": "1.22.5"
+  },
   "dependencies": {
     "dotenv": "^10.0.0",
     "erela.js": "^2.3.3",
