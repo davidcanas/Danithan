@@ -10,6 +10,7 @@ module.exports = class shardDisconnect extends Event {
 
     async run(error, shard) {
 console.log(`Ocorreu um erro na shard ${shard}: ${error}`)
+let embed;
 if (!error) {
 embed = new EthanEmbed()
 .setDescription(`A Shard ${shard} foi desconectada !`)
