@@ -7,7 +7,12 @@ module.exports = new mongoose.Schema({
           required: true
         },
         description: {
+          pt: {
           type: String
+          },
+          en: {
+            type: String
+          }
         },
         category: {
           type: String
