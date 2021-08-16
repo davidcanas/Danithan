@@ -80,6 +80,12 @@
       "db": "{{member}} isnt in my database",
       "title": "<:danithan:826727176845787136> Danis of {{member}}",
       "desc": "{{tag}} have {{danis}}"
+    },
+    "pay": {
+      "member": "Please mention a valid user",
+      "sucess": "Successful payment",
+      "confirm": "Do you want to pay {{money}} danis to {{member}}?",
+      "args": "Please provide a valid quantity to pay"
     }
  
 

@@ -81,6 +81,12 @@
         "db": "{{member}} não está na minha base de dados",
         "title": "<:danithan:826727176845787136> Danis de {{member}}",
         "desc": "{{tag}} têm {{dani}}"
+      },
+       "pay": {
+        "member": "Por favor provida um usuário válido",
+        "sucess": "Pagamento efetuado com sucesso",
+        "confirm": "Você quer realmente pagar {{money}} danis para {{member}}",
+        "args": "Por favor provida uma quantidade válida para pagar"
       }
    
 

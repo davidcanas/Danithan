@@ -3,7 +3,7 @@ const Danithan = require('./src/Danithan');
 const { EthanEmbed } = require("ethanutils")
 require("./src/Structures/DaniError");
 const { Manager } = require('erela.js');
-
+const ErisComponents = require("eris-components")
 const i18next = require("i18next");
 const client = new Danithan("Bot " + process.env.BOT_TOKEN, {
   allowedMentions: {
@@ -15,12 +15,21 @@ const client = new Danithan("Bot " + process.env.BOT_TOKEN, {
   defaultImageFormat: 'png',
   defaultImageSize: 2048
 });
+
+const options = {
+  debug: false, // Debug disabled.
+  invalidClientInstanceError: false, // Only set this option to false if client instance error is bugged.
+  ignoreRequestErrors: false // If Eris Components should ignore errors on request (4xx or 5xx) codes.
+};
+
+const ComponentsClient = ErisComponents.Client(client, options);
+
 module.exports = client
 client.startLoaders();
 client.connect();
 client.messageCollectors = []
 client.reactionCollectors = []
-
+client.components = ComponentsClient
 function MsToDate(ms) {
   let seg = Math.floor(ms / 1000)
   let minutes = 0
@@ -112,10 +121,7 @@ client.manager.on('trackError', (player, track, message) => {
 })
 client.on("rawWS", async (packet) => {
   client.manager.updateVoiceState(packet)
-  if (packet.t === "INTERACTION_CREATE" && packet.d.type === 2 && packet.data.name === "ping") {
- console.log("slash")
- client.createMessage(packet.channel_id, "Hello World")
-  }
+
   if (packet.t === "INTERACTION_CREATE" && packet.d.type === 3) {
     console.log("Id da guild" + packet.d.guild_id);
     console.log("Channel" + packet.d.channel_id);
