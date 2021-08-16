@@ -6,6 +6,10 @@ constructor(client) {
         name: "clean", 
         aliases: ["limpar"],
          category: "Admin",
+         description: {
+             pt: "Apaga mensagens",
+             en: "Clean messages"
+         },
         cooldown: 0,
         devOnly: false
     })

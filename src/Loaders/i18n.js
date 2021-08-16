@@ -6,7 +6,7 @@ const { readdirSync } = require('fs');
 module.exports = class LocaleStructure {
     constructor(client) {
         this.client = client;
-        this.languages = ["pt", "en", "es"];
+        this.languages = ["pt", "en"];
 
         i18next.use(backend).init({
             initImmediate: false,

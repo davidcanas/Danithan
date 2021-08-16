@@ -6,6 +6,10 @@ constructor(client) {
         name: "setlang", 
         aliases: ["langset", "lang"],
          category: "Config",
+         description: {
+         pt: "Seta a linguagem no servidor",
+         en: "Sets the language of the server"
+         },
         cooldown: 3,
     })
 }
@@ -16,15 +20,12 @@ async execute(ctx) {
 let langargs = ctx.args[0]
 if (!langargs) return ctx.msg.channel.createMessage(ctx.t("commands:setlang.args"))
 
- if (langargs !== "pt" && langargs !== "es" && langargs !== "en") return ctx.msg.channel.createMessage(ctx.t("commands:setlang.args"))
+ if (langargs !== "pt" && langargs !== "en") return ctx.msg.channel.createMessage(ctx.t("commands:setlang.args"))
  if (langargs === "pt") {
    langargs = "pt"
    setada = "Português"
  }
- if (langargs === "es") {
-   langargs = "es"
-   setada = "Español"
- }
+ 
  if (langargs === "en") {
    langargs = "en"
    setada = "English"
