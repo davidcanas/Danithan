@@ -86,6 +86,12 @@
         "sucess": "Pagamento efetuado com sucesso",
         "confirm": "Você quer realmente pagar {{money}} danis para {{member}}",
         "args": "Por favor provida uma quantidade válida para pagar"
+      },
+      "antiselfbot": {
+        "permuser": "Você necessita da permissão `banMembers` para executar este comando ",
+        "permbot": "Eu não tenho a permissão `banMembers`",
+        "banning": "<a:carregando:803349308589867010> Banindo...",
+       "sucess": "<:sim:803888459517132831> Pronto, bani todos os selfbots conhecidos do seu servidor"
       }
    
 

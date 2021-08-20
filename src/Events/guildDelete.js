@@ -26,10 +26,10 @@ module.exports = class guildDelete extends Event {
             .setTitle('Fui expulso de um servidor')
             .addField('Nome', `\`${guild.name}\``)
             .addField('ID do servidor', `\`${guild.id}\``)
-            .addField('Dono', `\`${owner.username}#${owner.discriminator}\``)
-            .addField('Membros', `\`${guild.members.size}\``)
+            .addField('Dono', `\`${owner?.username}#${owner?.discriminator}\``)
+            .addField('Membros', `\`${guild.members?.size}\``)
             .setColor("DARK_AQUA")
 
-        this.client.guilds.get("792018456786370590").channels.get('792018815646302228').createMessage(embed);
+        this.client.guilds.get("792018456786370590")?.channels.get('792018815646302228').createMessage(embed);
     };
 };

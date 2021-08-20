@@ -126,7 +126,7 @@ client.on("rawWS", async (packet) => {
     console.log("Id da guild" + packet.d.guild_id);
     console.log("Channel" + packet.d.channel_id);
     console.log("ID Message" + packet.d.id);
-    console.log(packet);
+
 
     if (packet.d.data.custom_id === "teste") {
       client.guilds.get(packet.d.guild_id).channels.get(packet.d.channel_id).messages.get(packet.d.message.id)
