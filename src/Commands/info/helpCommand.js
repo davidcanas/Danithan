@@ -53,7 +53,7 @@ module.exports = class helpCommand extends Command {
       .addOptions([categoria1, categoria2, categoria3]) // This method will add multiple options in the Select Menu.
       const Menu1 = new ErisComponents.Menu()
       .setPlaceholder('Selecione uma categoria') // This will set a placeholder for the Select Menu.
-      .setID('helpmenu')  // Sets the custom_id of the Select Menu. Util to recognize different components.
+      .setID('helpmenu1')  // Sets the custom_id of the Select Menu. Util to recognize different components.
       .setMaxValues(1) // Sets the max options values of the Select Menu.
       .setMinValues(1) // Sets the min options values of the Select Menu.
       .setDisabled(true) // Sets the disabled state of the Select Menu. (Default true if called)
